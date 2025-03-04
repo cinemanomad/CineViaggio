@@ -14,6 +14,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     </head>
     <body>
         <!-- Navigation-->
@@ -27,8 +30,8 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Raccolta Film">Raccolta Film</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="Mappa">Mappa</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="raccolta.html">Raccolta Film</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="mappa.html">Mappa</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -47,119 +50,40 @@
                 </div>
             </div>
         </header>
-  <article class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Con l’aiuto dei dati dell’IMBd, è stata creata una mappa mondiale interattiva che mostra le location famose e sconosciute di film e serie popolari in tutto il mondo. Le serie e i film sono suddivisi in base al loro genere e possono essere visualizzati sulla mappa. In questo modo, i giramondo e gli appassionati di cinema possono pianificare il prossimo viaggio in Paesi lontani con scenari cinematografici, o scoprire nuovi luoghi comodamente anche da casa.</p>
-
-                        <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>    
-                    </div>
-                </div>
-            </div>
-        </article>
         
-        
-        
-        
-        
-        
-        
-        
-        <!-- Main Content-->
+        <!-- Mappa Interattiva -->
         <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                            <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 24, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html"><h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2></a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 18, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Science has not yet mastered prophecy</h2>
-                            <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on August 24, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Failure is not an option</h2>
-                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2023
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
-                </div>
-            </div>
+            <h2 class="text-center">Esplora le location dei film</h2>
+            <div id="map" style="width: 100%; height: 500px;"></div>
         </div>
+        
+        <script>
+            var map = L.map('map').setView([41.9028, 12.4964], 6); // Centro Italia
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            
+            var films = [
+                {title: "La Dolce Vita", lat: 41.9009, lon: 12.4833, img: "assets/img/dolce_vita_poster.jpg", link: "film1.html"},
+                {title: "Il Postino", lat: 38.5564, lon: 14.8803, img: "assets/img/postino_poster.jpg", link: "film2.html"},
+                {title: "Call Me By Your Name", lat: 45.3647, lon: 9.6833, img: "assets/img/cmbyn_poster.jpg", link: "film3.html"},
+                {title: "The Tourist", lat: 45.4408, lon: 12.3155, img: "assets/img/tourist_poster.jpg", link: "film4.html"}
+            ];
+            
+            films.forEach(function(film) {
+                var marker = L.marker([film.lat, film.lon]).addTo(map);
+                var popupContent = `<a href="${film.link}"><img src="${film.img}" width="100"><br>${film.title}</a>`;
+                marker.bindPopup(popupContent);
+            });
+        </script>
+        
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">&copy; 2025 Film Girati in Italia - Progetto Universitario</div>
+                        <div class="small text-center text-muted fst-italic">&copy; 2025 CineViaggio - Progetto Universitario</div>
                     </div>
                 </div>
             </div>
