@@ -3,80 +3,65 @@
     "titolo": "Il Gladiatore",
     "regista": "Ridley Scott",
     "anno": 2000,
-    "location": "Colosseo, Roma",
+    "genere": "Azione",
+    "location": "Colosseo",
+    "citta": "Roma",
+    "regione": "Lazio",
     "immagine": "img/gladiatore.jpg",
-    "immagini": [
-      "img/colosseo1.jpg",
-      "img/colosseo2.jpg",
-      "img/colosseo3.jpg"
-    ],
     "pagina": "dettaglio-location.html?film=gladiatore",
     "latitudine": 41.8902,
-    "longitudine": 12.4922,
-    "descrizione": "Un ex generale romano, tradito dall'imperatore, diventa un gladiatore e cerca vendetta per la sua famiglia uccisa."
+    "longitudine": 12.4922
   },
   {
     "titolo": "La Dolce Vita",
     "regista": "Federico Fellini",
     "anno": 1960,
-    "location": "Fontana di Trevi, Roma",
-    "immagine": "img/dolce_vita.jpg",
-    "immagini": [
-      "img/dolce_vita1.jpg",
-      "img/dolce_vita2.jpg",
-      "img/dolce_vita3.jpg"
-    ],
+    "genere": "Drammatico",
+    "location": "Fontana di Trevi",
+    "citta": "Roma",
+    "regione": "Lazio",
+    "immagine": "img/dolcevita.jpg",
     "pagina": "dettaglio-location.html?film=dolcevita",
     "latitudine": 41.9009,
-    "longitudine": 12.4833,
-    "descrizione": "Un giornalista di gossip si muove tra l’alta società romana cercando il senso della vita. Celebre la scena nella Fontana di Trevi con Anita Ekberg."
+    "longitudine": 12.4833
   },
   {
     "titolo": "Il Padrino",
     "regista": "Francis Ford Coppola",
     "anno": 1972,
-    "location": "Savoca, Sicilia",
+    "genere": "Drammatico",
+    "location": "Bar Vitelli",
+    "citta": "Savoca",
+    "regione": "Sicilia",
     "immagine": "img/padrino.jpg",
-    "immagini": [
-      "img/padrino1.jpg",
-      "img/padrino2.jpg",
-      "img/padrino3.jpg"
-    ],
     "pagina": "dettaglio-location.html?film=padrino",
     "latitudine": 37.9466,
-    "longitudine": 15.2901,
-    "descrizione": "La storia epica della famiglia mafiosa Corleone, con riprese in Sicilia che mostrano la bellezza autentica dell'isola."
+    "longitudine": 15.2901
   },
   {
     "titolo": "Cinema Paradiso",
     "regista": "Giuseppe Tornatore",
     "anno": 1988,
-    "location": "Palazzo Adriano, Sicilia",
-    "immagine": "img/cinema_paradiso.jpg",
-    "immagini": [
-      "img/cinema_paradiso1.jpg",
-      "img/cinema_paradiso2.jpg",
-      "img/cinema_paradiso3.jpg"
-    ],
+    "genere": "Drammatico",
+    "location": "Piazza Umberto I",
+    "citta": "Palazzo Adriano",
+    "regione": "Sicilia",
+    "immagine": "img/cinemaparadiso.jpg",
     "pagina": "dettaglio-location.html?film=cinemaparadiso",
     "latitudine": 37.6856,
-    "longitudine": 13.3794,
-    "descrizione": "Un regista di successo torna nel suo paese d'infanzia e ricorda il vecchio cinema e l’amicizia con il proiezionista."
+    "longitudine": 13.3794
   },
   {
     "titolo": "Call Me by Your Name",
     "regista": "Luca Guadagnino",
     "anno": 2017,
-    "location": "Crema, Lombardia",
-    "immagine": "img/call_me_by_your_name.jpg",
-    "immagini": [
-      "img/call_me1.jpg",
-      "img/call_me2.jpg",
-      "img/call_me3.jpg"
-    ],
+    "genere": "Romantico",
+    "location": "Centro storico",
+    "citta": "Crema",
+    "regione": "Lombardia",
+    "immagine": "img/callme.jpg",
     "pagina": "dettaglio-location.html?film=callme",
     "latitudine": 45.3625,
-    "longitudine": 9.6819,
-    "descrizione": "Un'estate indimenticabile nella campagna italiana, dove sboccia un'intensa storia d'amore tra due giovani."
+    "longitudine": 9.6819
   }
 ]
