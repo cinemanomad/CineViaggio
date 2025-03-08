@@ -6,6 +6,12 @@
 <title>100 Film Iconici in Italia - Dettaglio Location</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+<style>
+  #carouselLocation img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+</style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,7 +43,7 @@
   </div>
   
   <h2 class="text-center mt-5">Foto della Location</h2>
-  <div id="carouselLocation" class="carousel slide mt-3" data-ride="carousel">
+  <div id="carouselLocation" class="carousel slide mt-3" data-ride="carousel" style="max-width: 600px; margin: 0 auto;">
     <div class="carousel-inner" id="galleria-location">
       <!-- Le immagini della location verranno caricate qui -->
     </div>
