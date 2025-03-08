@@ -1,45 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>100 Film Iconici in Italia</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    .hero-section {
-      background: url('img/cinema-bg.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      text-align: center;
-    }
-    .search-bar, .filter-bar {
-      max-width: 800px;
-      margin: 20px auto;
-    }
-    .filter-bar select, .filter-bar button {
-      margin-top: 10px;
-    }
-    .loading-spinner {
-      display: none;
-      text-align: center;
-      margin-top: 20px;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Film Iconici in Italia</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -49,124 +14,53 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
       <li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
-      <li class="nav-item"><a class="nav-link" href="webprojectplan.html">Web Project Plan</a></li>
     </ul>
   </div>
 </nav>
-<div class="hero-section">
-  <h1>Scopri i luoghi iconici del cinema in Italia</h1>
-</div>
+
 <div class="container mt-5">
-  <div class="search-bar">
-    <input type="text" id="searchInput" class="form-control" placeholder="Cerca un film o una location...">
-  </div>
-  <div class="filter-bar row">
-    <div class="col-md-3">
-      <select id="genreFilter" class="form-control">
-        <option value="">Tutti i generi</option>
-        <option value="Drammatico">Drammatico</option>
-        <option value="Azione">Azione</option>
-        <option value="Commedia">Commedia</option>
-        <option value="Storico">Storico</option>
-      </select>
-    </div>
-    <div class="col-md-3">
-      <select id="regionFilter" class="form-control">
-        <option value="">Tutte le regioni</option>
-        <option value="Lazio">Lazio</option>
-        <option value="Sicilia">Sicilia</option>
-        <option value="Lombardia">Lombardia</option>
-        <option value="Toscana">Toscana</option>
-      </select>
-    </div>
-    <div class="col-md-3">
-      <select id="yearFilter" class="form-control">
-        <option value="">Tutti gli anni</option>
-        <option value="1950">Anni '50</option>
-        <option value="1960">Anni '60</option>
-        <option value="1970">Anni '70</option>
-        <option value="1980">Anni '80</option>
-        <option value="1990">Anni '90</option>
-        <option value="2000">Anni 2000</option>
-        <option value="2010">Anni 2010</option>
-      </select>
-    </div>
-    <div class="col-md-3 text-center">
-      <button class="btn btn-secondary w-100" onclick="resetFilters()">Reset</button>
-    </div>
-  </div>
-  <div class="loading-spinner">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Caricamento...</span>
-    </div>
-  </div>
-  <div class="row" id="film-container"></div>
+  <h1 class="text-center mb-4">Benvenuto nel mondo del cinema in Italia</h1>
+  <div id="film-container" class="row"></div>
 </div>
-<footer>
-  <p>Progetto Universitario - 100 Film Iconici Girati in Italia</p>
-</footer>
+
 <script>
-  let filmsData = [];
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('films.json')
+      .then(response => response.json())
+      .then(films => {
+        let container = document.getElementById('film-container');
 
-  fetch('films.json')
-    .then(response => response.json())
-    .then(films => {
-      filmsData = films;
-      displayFilms(filmsData);
-    })
-    .catch(error => console.error('Errore nel caricamento dei film:', error));
-
-  function displayFilms(films) {
-    let container = document.getElementById('film-container');
-    container.innerHTML = '';
-    films.forEach(film => {
-      let card = `
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
-            <div class="card-body">
-              <h5 class="card-title">${film.titolo}</h5>
-              <p class="card-text"><strong>Location:</strong> ${film.location}</p>
-              <p class="card-text"><strong>Genere:</strong> ${film.genere}</p>
-              <p class="card-text"><strong>Regione:</strong> ${film.regione}</p>
-              <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
-              <a href="${film.pagina}" class="btn btn-primary">Scopri di più</a>
+        films.forEach(film => {
+          let card = `
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
+                <div class="card-body">
+                  <h5 class="card-title">${film.titolo}</h5>
+                  <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
+                  <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
+                  <p class="card-text"><strong>Location:</strong> ${film.location}, ${film.citta}, ${film.regione}</p>
+                  <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      `;
-      container.innerHTML += card;
-    });
-    document.querySelector('.loading-spinner').style.display = 'none';
-  }
-
-  function filterFilms() {
-    document.querySelector('.loading-spinner').style.display = 'block';
-    setTimeout(() => {
-      let query = document.getElementById('searchInput').value.toLowerCase();
-      let genre = document.getElementById('genreFilter').value;
-      let region = document.getElementById('regionFilter').value;
-      let year = document.getElementById('yearFilter').value;
-      
-      let filteredFilms = filmsData.filter(film => {
-        return (
-          (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
-          (genre === "" || film.genere === genre) &&
-          (region === "" || film.regione === region) &&
-          (year === "" || film.anno.startsWith(year))
-        );
+          `;
+          container.innerHTML += card;
+        });
+      })
+      .catch(error => {
+        console.error('Errore nel caricamento dei film:', error);
+        document.getElementById('film-container').innerHTML = "<p class='text-center text-danger'>Errore nel caricamento dei dati.</p>";
       });
-      displayFilms(filteredFilms);
-    }, 500);
-  }
-
-  document.getElementById('searchInput').addEventListener('input', filterFilms);
-  document.getElementById('genreFilter').addEventListener('change', filterFilms);
-  document.getElementById('regionFilter').addEventListener('change', filterFilms);
-  document.getElementById('yearFilter').addEventListener('change', filterFilms);
+  });
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
