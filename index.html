@@ -20,8 +20,11 @@
       text-align: center;
     }
     .search-bar, .filter-bar {
-      max-width: 700px;
+      max-width: 800px;
       margin: 20px auto;
+    }
+    .filter-bar select, .filter-bar button {
+      margin-top: 10px;
     }
     footer {
       background-color: #343a40;
@@ -55,7 +58,7 @@
     <input type="text" id="searchInput" class="form-control" placeholder="Cerca un film o una location...">
   </div>
   <div class="filter-bar row">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <select id="genreFilter" class="form-control">
         <option value="">Tutti i generi</option>
         <option value="Drammatico">Drammatico</option>
@@ -64,7 +67,7 @@
         <option value="Storico">Storico</option>
       </select>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-3">
       <select id="regionFilter" class="form-control">
         <option value="">Tutte le regioni</option>
         <option value="Lazio">Lazio</option>
@@ -72,6 +75,21 @@
         <option value="Lombardia">Lombardia</option>
         <option value="Toscana">Toscana</option>
       </select>
+    </div>
+    <div class="col-md-3">
+      <select id="yearFilter" class="form-control">
+        <option value="">Tutti gli anni</option>
+        <option value="1950">Anni '50</option>
+        <option value="1960">Anni '60</option>
+        <option value="1970">Anni '70</option>
+        <option value="1980">Anni '80</option>
+        <option value="1990">Anni '90</option>
+        <option value="2000">Anni 2000</option>
+        <option value="2010">Anni 2010</option>
+      </select>
+    </div>
+    <div class="col-md-3 text-center">
+      <button class="btn btn-secondary w-100" onclick="resetFilters()">Reset</button>
     </div>
   </div>
   <div class="row" id="film-container"></div>
@@ -103,6 +121,7 @@
               <p class="card-text"><strong>Location:</strong> ${film.location}</p>
               <p class="card-text"><strong>Genere:</strong> ${film.genere}</p>
               <p class="card-text"><strong>Regione:</strong> ${film.regione}</p>
+              <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
               <a href="${film.pagina}" class="btn btn-primary">Scopri di più</a>
             </div>
           </div>
@@ -116,23 +135,31 @@
     let query = document.getElementById('searchInput').value.toLowerCase();
     let genre = document.getElementById('genreFilter').value;
     let region = document.getElementById('regionFilter').value;
+    let year = document.getElementById('yearFilter').value;
     
     let filteredFilms = filmsData.filter(film => {
       return (
         (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
         (genre === "" || film.genere === genre) &&
-        (region === "" || film.regione === region)
+        (region === "" || film.regione === region) &&
+        (year === "" || film.anno.startsWith(year))
       );
     });
     displayFilms(filteredFilms);
   }
 
+  function resetFilters() {
+    document.getElementById('searchInput').value = "";
+    document.getElementById('genreFilter').value = "";
+    document.getElementById('regionFilter').value = "";
+    document.getElementById('yearFilter').value = "";
+    displayFilms(filmsData);
+  }
+
   document.getElementById('searchInput').addEventListener('input', filterFilms);
   document.getElementById('genreFilter').addEventListener('change', filterFilms);
   document.getElementById('regionFilter').addEventListener('change', filterFilms);
+  document.getElementById('yearFilter').addEventListener('change', filterFilms);
 </script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
