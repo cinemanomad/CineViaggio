@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -25,6 +26,11 @@
     }
     .filter-bar select, .filter-bar button {
       margin-top: 10px;
+    }
+    .loading-spinner {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
     }
     footer {
       background-color: #343a40;
@@ -92,6 +98,11 @@
       <button class="btn btn-secondary w-100" onclick="resetFilters()">Reset</button>
     </div>
   </div>
+  <div class="loading-spinner">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Caricamento...</span>
+    </div>
+  </div>
   <div class="row" id="film-container"></div>
 </div>
 <footer>
@@ -129,31 +140,27 @@
       `;
       container.innerHTML += card;
     });
+    document.querySelector('.loading-spinner').style.display = 'none';
   }
 
   function filterFilms() {
-    let query = document.getElementById('searchInput').value.toLowerCase();
-    let genre = document.getElementById('genreFilter').value;
-    let region = document.getElementById('regionFilter').value;
-    let year = document.getElementById('yearFilter').value;
-    
-    let filteredFilms = filmsData.filter(film => {
-      return (
-        (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
-        (genre === "" || film.genere === genre) &&
-        (region === "" || film.regione === region) &&
-        (year === "" || film.anno.startsWith(year))
-      );
-    });
-    displayFilms(filteredFilms);
-  }
-
-  function resetFilters() {
-    document.getElementById('searchInput').value = "";
-    document.getElementById('genreFilter').value = "";
-    document.getElementById('regionFilter').value = "";
-    document.getElementById('yearFilter').value = "";
-    displayFilms(filmsData);
+    document.querySelector('.loading-spinner').style.display = 'block';
+    setTimeout(() => {
+      let query = document.getElementById('searchInput').value.toLowerCase();
+      let genre = document.getElementById('genreFilter').value;
+      let region = document.getElementById('regionFilter').value;
+      let year = document.getElementById('yearFilter').value;
+      
+      let filteredFilms = filmsData.filter(film => {
+        return (
+          (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
+          (genre === "" || film.genere === genre) &&
+          (region === "" || film.regione === region) &&
+          (year === "" || film.anno.startsWith(year))
+        );
+      });
+      displayFilms(filteredFilms);
+    }, 500);
   }
 
   document.getElementById('searchInput').addEventListener('input', filterFilms);
