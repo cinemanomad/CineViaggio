@@ -32,6 +32,7 @@
       <p><strong>Regista:</strong> <span id="regista-film"></span></p>
       <p><strong>Anno:</strong> <span id="anno-film"></span></p>
       <p><strong>Location:</strong> <span id="location-film"></span></p>
+      <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
     </div>
   </div>
   <div id="map" style="height: 400px; margin-top: 20px;"></div>
@@ -49,6 +50,7 @@
         document.getElementById('regista-film').textContent = film.regista;
         document.getElementById('anno-film').textContent = film.anno;
         document.getElementById('location-film').textContent = film.location;
+        document.getElementById('descrizione-film').textContent = film.descrizione;
         document.getElementById('immagine-film').src = film.immagine;
 
         var map = L.map('map').setView([film.latitudine, film.longitudine], 14);
