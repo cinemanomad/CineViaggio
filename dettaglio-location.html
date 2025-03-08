@@ -26,19 +26,7 @@
   <h1 class="text-center mb-4" id="titolo-film"></h1>
   <div class="row">
     <div class="col-md-6">
-      <div id="carouselLocation" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" id="galleria-location">
-          <!-- Le immagini della location verranno caricate qui -->
-        </div>
-        <a class="carousel-control-prev" href="#carouselLocation" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselLocation" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+      <img id="immagine-film" class="img-fluid" alt="Locandina del Film">
     </div>
     <div class="col-md-6">
       <p><strong>Regista:</strong> <span id="regista-film"></span></p>
@@ -47,6 +35,23 @@
       <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
     </div>
   </div>
+  
+  <h2 class="text-center mt-5">Foto della Location</h2>
+  <div id="carouselLocation" class="carousel slide mt-3" data-ride="carousel">
+    <div class="carousel-inner" id="galleria-location">
+      <!-- Le immagini della location verranno caricate qui -->
+    </div>
+    <a class="carousel-control-prev" href="#carouselLocation" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselLocation" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <h2 class="text-center mt-5">Mappa della Location</h2>
   <div id="map" style="height: 400px; margin-top: 20px;"></div>
 </div>
 <script>
@@ -63,6 +68,7 @@
         document.getElementById('anno-film').textContent = film.anno;
         document.getElementById('location-film').textContent = film.location;
         document.getElementById('descrizione-film').textContent = film.descrizione;
+        document.getElementById('immagine-film').src = film.immagine;
         
         let galleria = document.getElementById('galleria-location');
         film.immagini.forEach((img, index) => {
