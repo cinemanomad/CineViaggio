@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>100 Film Iconici in Italia - Mappa</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">Film in Italia</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+      <li class="nav-item active"><a class="nav-link" href="#">Mappa</a></li>
+      <li class="nav-item"><a class="nav-link" href="webprojectplan.html">Web Project Plan</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Mappa delle Location Cinematografiche</h1>
+  <div id="map" style="height: 500px;"></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  var map = L.map('map').setView([41.9028, 12.4964], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  
+  // Aggiunta marker con popup per alcuni film
+  var locations = [
+    { lat: 41.9028, lon: 12.4964, title: "Roma - Film Iconico" },
+    { lat: 45.4642, lon: 9.1900, title: "Milano - Film Famoso" },
+    { lat: 40.8518, lon: 14.2681, title: "Napoli - Film Classico" }
+  ];
+  
+  locations.forEach(function(loc) {
+    L.marker([loc.lat, loc.lon]).addTo(map).bindPopup(loc.title);
+  });
+</script>
+</body>
+</html>

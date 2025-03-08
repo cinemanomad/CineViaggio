@@ -1,0 +1,53 @@
+[
+    {
+      "titolo": "Il Gladiatore",
+      "regista": "Ridley Scott",
+      "anno": 2000,
+      "location": "Colosseo, Roma",
+      "immagine": "img/gladiatore.jpg",
+      "pagina": "dettaglio-location.html?film=gladiatore",
+      "latitudine": 41.8902,
+      "longitudine": 12.4922
+    },
+    {
+      "titolo": "La Dolce Vita",
+      "regista": "Federico Fellini",
+      "anno": 1960,
+      "location": "Fontana di Trevi, Roma",
+      "immagine": "img/dolcevita.jpg",
+      "pagina": "dettaglio-location.html?film=dolcevita",
+      "latitudine": 41.9009,
+      "longitudine": 12.4833
+    },
+    {
+      "titolo": "Il Padrino",
+      "regista": "Francis Ford Coppola",
+      "anno": 1972,
+      "location": "Savoca, Sicilia",
+      "immagine": "img/padrino.jpg",
+      "pagina": "dettaglio-location.html?film=padrino",
+      "latitudine": 37.9466,
+      "longitudine": 15.2901
+    },
+    {
+      "titolo": "Cinema Paradiso",
+      "regista": "Giuseppe Tornatore",
+      "anno": 1988,
+      "location": "Palazzo Adriano, Sicilia",
+      "immagine": "img/cinemaparadiso.jpg",
+      "pagina": "dettaglio-location.html?film=cinemaparadiso",
+      "latitudine": 37.6856,
+      "longitudine": 13.3794
+    },
+    {
+      "titolo": "Call Me by Your Name",
+      "regista": "Luca Guadagnino",
+      "anno": 2017,
+      "location": "Crema, Lombardia",
+      "immagine": "img/callme.jpg",
+      "pagina": "dettaglio-location.html?film=callme",
+      "latitudine": 45.3625,
+      "longitudine": 9.6819
+    }
+  ]
+  
