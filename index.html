@@ -23,39 +23,95 @@
 
 <div class="container mt-5">
   <h1 class="text-center mb-4">Benvenuto nel mondo del cinema in Italia</h1>
+  
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input type="text" id="searchInput" class="form-control" placeholder="Cerca un film o una location...">
+    </div>
+    <div class="col-md-3">
+      <select id="genreFilter" class="form-control">
+        <option value="">Tutti i generi</option>
+        <option value="Drammatico">Drammatico</option>
+        <option value="Azione">Azione</option>
+        <option value="Commedia">Commedia</option>
+        <option value="Storico">Storico</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select id="regionFilter" class="form-control">
+        <option value="">Tutte le regioni</option>
+        <option value="Lazio">Lazio</option>
+        <option value="Sicilia">Sicilia</option>
+        <option value="Lombardia">Lombardia</option>
+        <option value="Toscana">Toscana</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-secondary w-100" onclick="resetFilters()">Reset</button>
+    </div>
+  </div>
+  
   <div id="film-container" class="row"></div>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    fetch('films.json')
-      .then(response => response.json())
-      .then(films => {
-        let container = document.getElementById('film-container');
+  let filmsData = [];
 
-        films.forEach(film => {
-          let card = `
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
-                <div class="card-body">
-                  <h5 class="card-title">${film.titolo}</h5>
-                  <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
-                  <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
-                  <p class="card-text"><strong>Location:</strong> ${film.location}, ${film.citta}, ${film.regione}</p>
-                  <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
-                </div>
-              </div>
+  fetch('films.json')
+    .then(response => response.json())
+    .then(films => {
+      filmsData = films;
+      displayFilms(filmsData);
+    })
+    .catch(error => console.error('Errore nel caricamento dei film:', error));
+
+  function displayFilms(films) {
+    let container = document.getElementById('film-container');
+    container.innerHTML = '';
+    films.forEach(film => {
+      let card = `
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
+            <div class="card-body">
+              <h5 class="card-title">${film.titolo}</h5>
+              <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
+              <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
+              <p class="card-text"><strong>Location:</strong> ${film.location}, ${film.citta}, ${film.regione}</p>
+              <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
             </div>
-          `;
-          container.innerHTML += card;
-        });
-      })
-      .catch(error => {
-        console.error('Errore nel caricamento dei film:', error);
-        document.getElementById('film-container').innerHTML = "<p class='text-center text-danger'>Errore nel caricamento dei dati.</p>";
-      });
-  });
+          </div>
+        </div>
+      `;
+      container.innerHTML += card;
+    });
+  }
+
+  function filterFilms() {
+    let query = document.getElementById('searchInput').value.toLowerCase();
+    let genre = document.getElementById('genreFilter').value;
+    let region = document.getElementById('regionFilter').value;
+    
+    let filteredFilms = filmsData.filter(film => {
+      return (
+        (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
+        (genre === "" || film.genere === genre) &&
+        (region === "" || film.regione === region)
+      );
+    });
+    displayFilms(filteredFilms);
+  }
+
+  function resetFilters() {
+    document.getElementById('searchInput').value = "";
+    document.getElementById('genreFilter').value = "";
+    document.getElementById('regionFilter').value = "";
+    displayFilms(filmsData);
+  }
+
+  document.getElementById('searchInput').addEventListener('input', filterFilms);
+  document.getElementById('genreFilter').addEventListener('change', filterFilms);
+  document.getElementById('regionFilter').addEventListener('change', filterFilms);
 </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -63,4 +119,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
