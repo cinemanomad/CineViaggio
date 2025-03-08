@@ -7,8 +7,8 @@
     "immagine": "img/gladiatore.jpg",
     "immagini": [
       "img/colosseo1.jpg",
-      "img/gladiatore2.jpg",
-      "img/gladiatore3.jpg"
+      "img/colosseo2.jpg",
+      "img/colosseo3.jpg"
     ],
     "pagina": "dettaglio-location.html?film=gladiatore",
     "latitudine": 41.8902,
