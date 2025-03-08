@@ -41,7 +41,7 @@
                 <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
                 <p class="card-text"><strong>Location:</strong> ${film.location}</p>
                 <p class="card-text">${film.descrizione.substring(0, 100)}...</p>
-                <a href="${film.pagina}" class="btn btn-primary">Scopri di più</a>
+                <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
               </div>
             </div>
           </div>
