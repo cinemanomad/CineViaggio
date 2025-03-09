@@ -6,15 +6,12 @@ body {
 
 /* Navbar trasparente */
 .navbar {
-  background-color: transparent !important;
+  background-color: rgba(52, 58, 64, 0.5) !important;
   transition: background-color 0.3s ease-in-out;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
 }
 
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.7) !important;
+  background-color: rgba(52, 58, 64, 0.9) !important;
 }
 
 .navbar-brand {
@@ -56,7 +53,7 @@ body {
 
 /* Sezioni */
 .container {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 /* Card Film */
