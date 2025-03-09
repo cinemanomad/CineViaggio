@@ -22,13 +22,19 @@
     </div>
   </nav>
 
-  <header id="hero" class="hero-section text-center text-white">
+  <header id="hero" class="hero-section text-center text-white" style="background-image: url('img/default.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Scopri le Location più Iconiche del Cinema Italiano</h1>
       <p class="lead">Esplora le città e i luoghi che hanno fatto la storia del cinema</p>
     </div>
   </header>
+
+  <div class="container text-center mt-4">
+    <button class="btn btn-primary" onclick="cambiaImmagine('img/location1.jpg')">Immagine 1</button>
+    <button class="btn btn-secondary" onclick="cambiaImmagine('img/location2.jpg')">Immagine 2</button>
+    <button class="btn btn-success" onclick="cambiaImmagine('img/location3.jpg')">Immagine 3</button>
+  </div>
 
   <div class="container mt-5">
     <h2 class="text-center mb-4">Esplora i Film</h2>
@@ -38,6 +44,12 @@
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>Progetto Universitario - CineViaggio</p>
   </footer>
+
+  <script>
+    function cambiaImmagine(url) {
+      document.getElementById('hero').style.backgroundImage = `url('${url}')`;
+    }
+  </script>
 
   <script>
     fetch('films.json')
