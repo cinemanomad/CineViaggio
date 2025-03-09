@@ -86,8 +86,13 @@
       container.innerHTML = '';
       if (films.length === 0) {
         container.innerHTML = '<p class="text-center">Nessun film trovato.</p>';
+        return;
       }
       films.forEach(film => {
+        let locationText = film.location ? `<p class="card-text"><strong>📍 Location:</strong> ${film.location}</p>` : '';
+        let cittaText = film.citta ? `<p class="card-text"><strong>🏙️ Città:</strong> ${film.citta}</p>` : '';
+        let regioneText = film.regione ? `<p class="card-text"><strong>🌍 Regione:</strong> ${film.regione}</p>` : '';
+
         let card = `
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-lg rounded border-0">
@@ -96,7 +101,9 @@
                 <h5 class="card-title font-weight-bold">${film.titolo}</h5>
                 <p class="card-text"><strong>🎬 Regista:</strong> ${film.regista}</p>
                 <p class="card-text"><strong>📅 Anno:</strong> ${film.anno}</p>
-                <p class="card-text"><strong>📍 Location:</strong> ${film.location}</p>
+                ${locationText}
+                ${cittaText}
+                ${regioneText}
                 <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-danger">Scopri di più</a>
               </div>
             </div>
@@ -129,6 +136,12 @@
         regioneSelect.innerHTML += `<option value="${regione}">${regione}</option>`;
       });
     }
+
+    document.getElementById('search-bar').addEventListener('input', function() {
+        let searchTerm = this.value.toLowerCase();
+        let filteredFilms = filmsData.filter(film => film.titolo.toLowerCase().includes(searchTerm));
+        displayFilms(filteredFilms);
+    });
   </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
