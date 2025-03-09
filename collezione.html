@@ -21,17 +21,27 @@
       </ul>
     </div>
   </nav>
+  
+  <header id="hero" class="hero-section text-center text-white" style="background-image: url('img/colosseo1.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Scopri le Location più Iconiche del Cinema Italiano</h1>
+      <p class="lead">Esplora le città e i luoghi che hanno fatto la storia del cinema</p>
+    </div>
+  </header>
 
   <div class="container mt-5">
-    <h1 class="text-center mb-4">Collezione dei 100 Film Iconici</h1>
+    <h2 class="text-center mb-4">Esplora i Film</h2>
     
     <div class="row mb-4">
-      <div class="col-md-4">
-        <input type="text" id="search-bar" class="form-control" placeholder="Cerca un film...">
-      </div>
       <div class="col-md-3">
         <select id="filter-genere" class="form-control">
           <option value="">Tutti i generi</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select id="filter-citta" class="form-control">
+          <option value="">Tutte le città</option>
         </select>
       </div>
       <div class="col-md-3">
@@ -44,12 +54,19 @@
       </div>
     </div>
     
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <input type="text" id="search-bar" class="form-control" placeholder="Cerca un film...">
+      </div>
+    </div>
+    
     <div class="row" id="film-container"></div>
   </div>
 
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>Progetto Universitario - CineViaggio</p>
   </footer>
+
 
   <script>
     let filmsData = [];
