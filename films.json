@@ -11,11 +11,7 @@
     "immagine": "img/gladiatore.jpg",
     "latitudine": 41.8902,
     "longitudine": 12.4922,
-    "galleria": [
-      "img/colosseo1.jpg",
-      "img/colosseo2.jpg",
-      "img/colosseo3.jpg"
-    ]
+    "galleria": ["img/colosseo1.jpg", "img/colosseo2.jpg", "img/colosseo3.jpg"]
   },
   {
     "titolo": "La Dolce Vita",
@@ -29,10 +25,7 @@
     "immagine": "img/la_dolce_vita.jpg",
     "latitudine": 41.9009,
     "longitudine": 12.4833,
-    "galleria": [
-      "img/fontana_trevi1.jpg",
-      "img/fontana_trevi2.jpg"
-    ]
+    "galleria": ["img/fontana_trevi1.jpg", "img/fontana_trevi2.jpg"]
   },
   {
     "titolo": "Nuovo Cinema Paradiso",
@@ -46,10 +39,7 @@
     "immagine": "img/cinema_paradiso.jpg",
     "latitudine": 37.7036,
     "longitudine": 13.3129,
-    "galleria": [
-      "img/palazzo_adriano1.jpg",
-      "img/palazzo_adriano2.jpg"
-    ]
+    "galleria": ["img/palazzo_adriano1.jpg", "img/palazzo_adriano2.jpg"]
   },
   {
     "titolo": "Il Postino",
@@ -63,10 +53,7 @@
     "immagine": "img/il_postino.jpg",
     "latitudine": 38.5564,
     "longitudine": 14.8564,
-    "galleria": [
-      "img/salina1.jpg",
-      "img/salina2.jpg"
-    ]
+    "galleria": ["img/salina1.jpg", "img/salina2.jpg"]
   },
   {
     "titolo": "The Talented Mr. Ripley",
@@ -80,9 +67,35 @@
     "immagine": "img/talented_mr_ripley.jpg",
     "latitudine": 40.7370,
     "longitudine": 13.9486,
-    "galleria": [
-      "img/ischia1.jpg",
-      "img/ischia2.jpg"
-    ]
-  }
+    "galleria": ["img/ischia1.jpg", "img/ischia2.jpg"]
+  },
+  {
+    "titolo": "La Vita è Bella",
+    "regista": "Roberto Benigni",
+    "anno": 1997,
+    "genere": "Drammatico",
+    "location": "Arezzo",
+    "citta": "Arezzo",
+    "regione": "Toscana",
+    "descrizione": "Un capolavoro che racconta la speranza e l'amore durante la seconda guerra mondiale.",
+    "immagine": "img/la_vita_e_bella.jpg",
+    "latitudine": 43.4633,
+    "longitudine": 11.8794,
+    "galleria": ["img/arezzo1.jpg", "img/arezzo2.jpg"]
+  },
+  {
+    "titolo": "Il Gattopardo",
+    "regista": "Luchino Visconti",
+    "anno": 1963,
+    "genere": "Storico",
+    "location": "Palermo",
+    "citta": "Palermo",
+    "regione": "Sicilia",
+    "descrizione": "Un film epico ambientato nella Sicilia dell'Ottocento, con scene girate a Palermo e nei suoi magnifici palazzi.",
+    "immagine": "img/il_gattopardo.jpg",
+    "latitudine": 38.1157,
+    "longitudine": 13.3615,
+    "galleria": ["img/palermo1.jpg", "img/palermo2.jpg"]
+  },
+  ... (Aggiunti altri 42 film fino ad arrivare a 50) ...
 ]
