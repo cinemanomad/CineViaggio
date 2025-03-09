@@ -32,6 +32,31 @@
 
   <div class="container mt-5">
     <h2 class="text-center mb-4">Esplora i Film</h2>
+    
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <input type="text" id="search-bar" class="form-control" placeholder="Cerca un film...">
+      </div>
+      <div class="col-md-3">
+        <select id="filter-genere" class="form-control">
+          <option value="">Tutti i generi</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select id="filter-citta" class="form-control">
+          <option value="">Tutte le città</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select id="filter-regione" class="form-control">
+          <option value="">Tutte le regioni</option>
+        </select>
+      </div>
+      <div class="col-md-2 mt-2">
+        <button class="btn btn-secondary w-100" id="reset-filters">Reset</button>
+      </div>
+    </div>
+    
     <div class="row" id="film-container"></div>
   </div>
 
@@ -40,41 +65,79 @@
   </footer>
 
   <script>
+    let filmsData = [];
+
     fetch('films.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Errore HTTP: ${response.status}`);
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(films => {
-        console.log("Film caricati:", films);
-        let container = document.getElementById('film-container');
-        container.innerHTML = '';
-        if (films.length === 0) {
-          container.innerHTML = '<p class="text-center">Nessun film trovato.</p>';
-        }
-        films.forEach(film => {
-          let card = `
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
-                <div class="card-body">
-                  <h5 class="card-title">${film.titolo}</h5>
-                  <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
-                  <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
-                  <p class="card-text"><strong>Location:</strong> ${film.location}</p>
-                  <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
-                </div>
-              </div>
-            </div>
-          `;
-          container.innerHTML += card;
-        });
+        filmsData = films;
+        populateFilters(films);
+        displayFilms(films);
       })
       .catch(error => console.error('Errore nel caricamento dei film:', error));
+
+    function displayFilms(films) {
+      let container = document.getElementById('film-container');
+      container.innerHTML = '';
+      if (films.length === 0) {
+        container.innerHTML = '<p class="text-center">Nessun film trovato.</p>';
+      }
+      films.forEach(film => {
+        let card = `
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
+              <div class="card-body">
+                <h5 class="card-title">${film.titolo}</h5>
+                <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
+                <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
+                <p class="card-text"><strong>Location:</strong> ${film.location}</p>
+                <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
+              </div>
+            </div>
+          </div>
+        `;
+        container.innerHTML += card;
+      });
+    }
+
+    function populateFilters(films) {
+      let generi = new Set(), citta = new Set(), regioni = new Set();
+      films.forEach(film => {
+        if (film.genere) generi.add(film.genere);
+        if (film.citta) citta.add(film.citta);
+        if (film.regione) regioni.add(film.regione);
+      });
+
+      let genereSelect = document.getElementById('filter-genere');
+      generi.forEach(genere => {
+        genereSelect.innerHTML += `<option value="${genere}">${genere}</option>`;
+      });
+
+      let cittaSelect = document.getElementById('filter-citta');
+      citta.forEach(citta => {
+        cittaSelect.innerHTML += `<option value="${citta}">${citta}</option>`;
+      });
+      
+      let regioneSelect = document.getElementById('filter-regione');
+      regioni.forEach(regione => {
+        regioneSelect.innerHTML += `<option value="${regione}">${regione}</option>`;
+      });
+    }
+
+    document.getElementById('search-bar').addEventListener('input', displayFilms);
+    document.getElementById('filter-genere').addEventListener('change', displayFilms);
+    document.getElementById('filter-citta').addEventListener('change', displayFilms);
+    document.getElementById('filter-regione').addEventListener('change', displayFilms);
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      document.getElementById('search-bar').value = '';
+      document.getElementById('filter-genere').value = '';
+      document.getElementById('filter-citta').value = '';
+      document.getElementById('filter-regione').value = '';
+      displayFilms(filmsData);
+    });
   </script>
-  
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
