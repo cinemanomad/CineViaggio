@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="index.html">CineViaggio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
     <h1 class="text-center mb-4">Collezione dei 100 Film Iconici</h1>
     
     <div class="row mb-4">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <input type="text" id="search-bar" class="form-control" placeholder="Cerca un film...">
       </div>
       <div class="col-md-3">
@@ -38,6 +38,9 @@
         <select id="filter-regione" class="form-control">
           <option value="">Tutte le regioni</option>
         </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-secondary w-100" id="reset-filters">Reset</button>
       </div>
     </div>
     
@@ -104,6 +107,12 @@
     document.getElementById('search-bar').addEventListener('input', filterFilms);
     document.getElementById('filter-genere').addEventListener('change', filterFilms);
     document.getElementById('filter-regione').addEventListener('change', filterFilms);
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      document.getElementById('search-bar').value = '';
+      document.getElementById('filter-genere').value = '';
+      document.getElementById('filter-regione').value = '';
+      displayFilms(filmsData);
+    });
 
     function filterFilms() {
       let searchText = document.getElementById('search-bar').value.toLowerCase();
