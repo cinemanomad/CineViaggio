@@ -8,9 +8,12 @@
     "citta": "Roma",
     "regione": "Lazio",
     "immagine": "img/gladiatore.jpg",
-    "pagina": "dettaglio-location.html?film=gladiatore",
-    "latitudine": 41.8902,
-    "longitudine": 12.4922
+    "immagini_location": [
+      "img/colosseo1.jpg",
+      "img/colosseo2.jpg",
+      "img/colosseo3.jpg"
+    ],
+    "storia": "Il Colosseo, uno dei monumenti più iconici di Roma, fu utilizzato come ambientazione per alcune scene de 'Il Gladiatore'. Costruito nel I secolo d.C., è stato il più grande anfiteatro mai costruito e ospitava combattimenti tra gladiatori e spettacoli pubblici."
   },
   {
     "titolo": "La Dolce Vita",
@@ -21,9 +24,11 @@
     "citta": "Roma",
     "regione": "Lazio",
     "immagine": "img/dolcevita.jpg",
-    "pagina": "dettaglio-location.html?film=dolcevita",
-    "latitudine": 41.9009,
-    "longitudine": 12.4833
+    "immagini_location": [
+      "img/fontanaditrevi1.jpg",
+      "img/fontanaditrevi2.jpg"
+    ],
+    "storia": "La Fontana di Trevi è uno dei simboli più celebri di Roma. Divenne famosa grazie alla scena iconica di 'La Dolce Vita', in cui Anita Ekberg entra nell'acqua invitando Marcello Mastroianni a seguirla. La fontana risale al XVIII secolo e rappresenta il trionfo dell'acqua come elemento vitale della città."
   },
   {
     "titolo": "Il Padrino",
@@ -34,34 +39,10 @@
     "citta": "Savoca",
     "regione": "Sicilia",
     "immagine": "img/padrino.jpg",
-    "pagina": "dettaglio-location.html?film=padrino",
-    "latitudine": 37.9466,
-    "longitudine": 15.2901
-  },
-  {
-    "titolo": "Cinema Paradiso",
-    "regista": "Giuseppe Tornatore",
-    "anno": 1988,
-    "genere": "Drammatico",
-    "location": "Piazza Umberto I",
-    "citta": "Palazzo Adriano",
-    "regione": "Sicilia",
-    "immagine": "img/cinemaparadiso.jpg",
-    "pagina": "dettaglio-location.html?film=cinemaparadiso",
-    "latitudine": 37.6856,
-    "longitudine": 13.3794
-  },
-  {
-    "titolo": "Call Me by Your Name",
-    "regista": "Luca Guadagnino",
-    "anno": 2017,
-    "genere": "Romantico",
-    "location": "Centro storico",
-    "citta": "Crema",
-    "regione": "Lombardia",
-    "immagine": "img/callme.jpg",
-    "pagina": "dettaglio-location.html?film=callme",
-    "latitudine": 45.3625,
-    "longitudine": 9.6819
+    "immagini_location": [
+      "img/barvitelli1.jpg",
+      "img/barvitelli2.jpg"
+    ],
+    "storia": "Il Bar Vitelli, situato a Savoca in Sicilia, è un luogo iconico de 'Il Padrino'. Qui Michael Corleone incontra Apollonia, la sua futura moglie. Il bar è oggi una meta turistica per gli appassionati della saga, mantenendo intatta la sua atmosfera storica."
   }
 ]
