@@ -90,4 +90,110 @@
     "immagine": "img/la_grande_bellezza.jpg",
     "galleria": ["img/roma1.jpg", "img/roma2.jpg"]
   }
+  [
+  {
+    "titolo": "La Dolce Vita",
+    "regista": "Federico Fellini",
+    "anno": 1960,
+    "genere": "Drammatico",
+    "location": "Fontana di Trevi",
+    "citta": "Roma",
+    "regione": "Lazio",
+    "descrizione": "Un giornalista vive la dolce vita di Roma tra feste e incontri inaspettati.",
+    "descrizione_location": "La Fontana di Trevi è uno dei luoghi più iconici di Roma, resa immortale dalla scena con Anita Ekberg. Costruita nel XVIII secolo, è una delle fontane più famose al mondo.",
+    "immagine": "img/dolce_vita.jpg",
+    "galleria": ["img/trevi1.jpg", "img/trevi2.jpg", "img/trevi3.jpg"]
+  },
+  {
+    "titolo": "Il Padrino",
+    "regista": "Francis Ford Coppola",
+    "anno": 1972,
+    "genere": "Crime",
+    "location": "Savoca, Bar Vitelli",
+    "citta": "Savoca",
+    "regione": "Sicilia",
+    "descrizione": "La storia della famiglia Corleone e del suo dominio sulla mafia italoamericana.",
+    "descrizione_location": "Savoca è stata scelta per le riprese siciliane del film, con il famoso Bar Vitelli, che oggi è una meta turistica per gli appassionati della saga.",
+    "immagine": "img/padrino.jpg",
+    "galleria": ["img/savoca1.jpg", "img/savoca2.jpg", "img/savoca3.jpg"]
+  },
+  {
+    "titolo": "Il Gattopardo",
+    "regista": "Luchino Visconti",
+    "anno": 1963,
+    "genere": "Storico",
+    "location": "Palermo, Palazzo Gangi",
+    "citta": "Palermo",
+    "regione": "Sicilia",
+    "descrizione": "La decadenza dell'aristocrazia siciliana durante il Risorgimento italiano.",
+    "descrizione_location": "Palazzo Gangi, celebre per il suo magnifico Salone degli Specchi, è stato la location della famosa scena del ballo.",
+    "immagine": "img/gattopardo.jpg",
+    "galleria": ["img/palermo1.jpg", "img/palermo2.jpg"]
+  },
+  {
+    "titolo": "Roma Città Aperta",
+    "regista": "Roberto Rossellini",
+    "anno": 1945,
+    "genere": "Drammatico",
+    "location": "Roma",
+    "citta": "Roma",
+    "regione": "Lazio",
+    "descrizione": "Una storia di resistenza durante l'occupazione nazista di Roma.",
+    "descrizione_location": "Le strade e i quartieri di Roma sono stati protagonisti di questa pellicola neorealista.",
+    "immagine": "img/roma_citta_aperta.jpg",
+    "galleria": ["img/roma_citta1.jpg", "img/roma_citta2.jpg"]
+  },
+  {
+    "titolo": "Ladri di Biciclette",
+    "regista": "Vittorio De Sica",
+    "anno": 1948,
+    "genere": "Drammatico",
+    "location": "Roma",
+    "citta": "Roma",
+    "regione": "Lazio",
+    "descrizione": "Un uomo e suo figlio cercano disperatamente una bicicletta rubata.",
+    "descrizione_location": "Le strade di Roma sono il teatro di questa intensa storia di povertà e disperazione.",
+    "immagine": "img/ladri_di_biciclette.jpg",
+    "galleria": ["img/ladri1.jpg", "img/ladri2.jpg"]
+  },
+  {
+    "titolo": "La Vita è Bella",
+    "regista": "Roberto Benigni",
+    "anno": 1997,
+    "genere": "Drammatico",
+    "location": "Arezzo",
+    "citta": "Arezzo",
+    "regione": "Toscana",
+    "descrizione": "Un padre usa il suo umorismo per proteggere il figlio dagli orrori della guerra.",
+    "descrizione_location": "Il centro storico di Arezzo è stato scelto per le sue strade pittoresche e il fascino rinascimentale.",
+    "immagine": "img/la_vita_e_bella.jpg",
+    "galleria": ["img/arezzo1.jpg", "img/arezzo2.jpg"]
+  },
+  {
+    "titolo": "Mediterraneo",
+    "regista": "Gabriele Salvatores",
+    "anno": 1991,
+    "genere": "Commedia",
+    "location": "Kastellorizo, Grecia",
+    "citta": "Kastellorizo",
+    "regione": "Grecia",
+    "descrizione": "Un gruppo di soldati italiani si ritrova bloccato su un'isola greca durante la Seconda Guerra Mondiale.",
+    "descrizione_location": "L'isola di Kastellorizo, con il suo mare cristallino e le case colorate, è stata il perfetto scenario per questo film.",
+    "immagine": "img/mediterraneo.jpg",
+    "galleria": ["img/kastellorizo1.jpg", "img/kastellorizo2.jpg"]
+  },
+  {
+    "titolo": "Il Sorpasso",
+    "regista": "Dino Risi",
+    "anno": 1962,
+    "genere": "Commedia",
+    "location": "Via Aurelia",
+    "citta": "Toscana",
+    "regione": "Toscana",
+    "descrizione": "Un viaggio on the road attraverso l'Italia degli anni '60.",
+    "descrizione_location": "Le scene del film si svolgono lungo la Via Aurelia, tra il Lazio e la Toscana.",
+    "immagine": "img/il_sorpasso.jpg",
+    "galleria": ["img/via_aurelia1.jpg", "img/via_aurelia2.jpg"]
+  }
+]
 ]
