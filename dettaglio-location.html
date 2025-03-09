@@ -41,6 +41,9 @@
         <p><strong>Regista:</strong> <span id="regista-film"></span></p>
         <p><strong>Anno:</strong> <span id="anno-film"></span></p>
         <p><strong>Genere:</strong> <span id="genere-film"></span></p>
+        <p><strong>Location:</strong> <span id="location-film"></span></p>
+        <p><strong>Città:</strong> <span id="citta-film"></span></p>
+        <p><strong>Regione:</strong> <span id="regione-film"></span></p>
         <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
       </div>
     </div>
@@ -86,6 +89,9 @@
           document.getElementById('regista-film').textContent = film.regista;
           document.getElementById('anno-film').textContent = film.anno;
           document.getElementById('genere-film').textContent = film.genere;
+          document.getElementById('location-film').textContent = film.location;
+          document.getElementById('citta-film').textContent = film.citta;
+          document.getElementById('regione-film').textContent = film.regione;
           document.getElementById('descrizione-film').textContent = film.descrizione;
           document.getElementById('hero').style.backgroundImage = `url(${film.immagine})`;
           document.getElementById('immagine-film').src = film.immagine;
