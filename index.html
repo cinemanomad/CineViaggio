@@ -43,6 +43,11 @@
         </select>
       </div>
       <div class="col-md-3">
+        <select id="filter-citta" class="form-control">
+          <option value="">Tutte le città</option>
+        </select>
+      </div>
+      <div class="col-md-3">
         <select id="filter-regione" class="form-control">
           <option value="">Tutte le regioni</option>
         </select>
@@ -94,10 +99,12 @@
     }
 
     function populateFilters(films) {
+      let citta = new Set();
       let generi = new Set();
       let regioni = new Set();
       films.forEach(film => {
         if (film.genere) generi.add(film.genere);
+        if (film.citta) citta.add(film.citta);
         if (film.regione) regioni.add(film.regione);
       });
 
@@ -106,6 +113,10 @@
         genereSelect.innerHTML += `<option value="${genere}">${genere}</option>`;
       });
 
+      let cittaSelect = document.getElementById('filter-citta');
+      citta.forEach(citta => {
+        cittaSelect.innerHTML += `<option value="${citta}">${citta}</option>`;
+      });
       let regioneSelect = document.getElementById('filter-regione');
       regioni.forEach(regione => {
         regioneSelect.innerHTML += `<option value="${regione}">${regione}</option>`;
@@ -115,6 +126,7 @@
     document.getElementById('search-bar').addEventListener('input', filterFilms);
     document.getElementById('filter-genere').addEventListener('change', filterFilms);
     document.getElementById('filter-regione').addEventListener('change', filterFilms);
+    document.getElementById('filter-citta').addEventListener('change', filterFilms);
     document.getElementById('reset-filters').addEventListener('click', () => {
       document.getElementById('search-bar').value = '';
       document.getElementById('filter-genere').value = '';
@@ -125,12 +137,14 @@
     function filterFilms() {
       let searchText = document.getElementById('search-bar').value.toLowerCase();
       let selectedGenere = document.getElementById('filter-genere').value;
+      let selectedCitta = document.getElementById('filter-citta').value;
       let selectedRegione = document.getElementById('filter-regione').value;
       
       let filteredFilms = filmsData.filter(film => {
         return (
           (film.titolo.toLowerCase().includes(searchText) || searchText === '') &&
           (film.genere === selectedGenere || selectedGenere === '') &&
+          (film.citta === selectedCitta || selectedCitta === '') &&
           (film.regione === selectedRegione || selectedRegione === '')
         );
       });
