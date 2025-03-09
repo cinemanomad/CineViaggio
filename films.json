@@ -83,17 +83,3 @@
     "longitudine": 11.8794,
     "galleria": ["img/arezzo1.jpg", "img/arezzo2.jpg"]
   },
-  {
-    "titolo": "Il Gattopardo",
-    "regista": "Luchino Visconti",
-    "anno": 1963,
-    "genere": "Storico",
-    "location": "Palermo",
-    "citta": "Palermo",
-    "regione": "Sicilia",
-    "descrizione": "Un film epico ambientato nella Sicilia dell'Ottocento, con scene girate a Palermo e nei suoi magnifici palazzi.",
-    "immagine": "img/il_gattopardo.jpg",
-    "latitudine": 38.1157,
-    "longitudine": 13.3615,
-    "galleria": ["img/palermo1.jpg", "img/palermo2.jpg"]
-  },
