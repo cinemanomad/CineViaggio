@@ -5,32 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CineViaggio - Dettaglio Location</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    .hero-section {
-      height: 400px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      text-align: center;
-      font-size: 2rem;
-    }
-    .map-container {
-      height: 400px;
-      margin-top: 20px;
-    }
-    .image-gallery img {
-      max-height: 400px;
-      object-fit: cover;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,11 +23,27 @@
     </div>
   </nav>
 
-  <div id="hero" class="hero-section"></div>
+  <div id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 id="titolo-film"></h1>
+    </div>
+  </div>
 
   <div class="container mt-5">
-    <h1 class="text-center mb-4" id="titolo-film"></h1>
-    <p class="text-center" id="descrizione-film"></p>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h4>Locandina</h4>
+        <img id="immagine-film" class="img-fluid" alt="Locandina del Film">
+      </div>
+      <div class="col-md-8">
+        <h4>Dettagli del Film</h4>
+        <p><strong>Regista:</strong> <span id="regista-film"></span></p>
+        <p><strong>Anno:</strong> <span id="anno-film"></span></p>
+        <p><strong>Genere:</strong> <span id="genere-film"></span></p>
+        <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
+      </div>
+    </div>
   </div>
 
   <div class="container mt-5">
@@ -70,26 +62,6 @@
   </div>
 
   <div class="container mt-5">
-    <h2 class="text-center mb-4">Descrizione della Location</h2>
-    <div class="accordion" id="accordionLocation">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Storia della Location
-            </button>
-          </h2>
-        </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionLocation">
-          <div class="card-body" id="storia-location">
-            Caricamento della storia...
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container mt-5">
     <h2 class="text-center mb-4">Mappa della Location</h2>
     <div id="map" class="map-container"></div>
   </div>
@@ -98,50 +70,30 @@
     <p>Progetto Universitario - CineViaggio</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script>
     function getParameterByName(name) {
       const urlParams = new URLSearchParams(window.location.search);
       return urlParams.get(name);
     }
-
     const filmTitolo = decodeURIComponent(getParameterByName('film')).trim();
-
     fetch('films.json')
       .then(response => response.json())
       .then(films => {
         let film = films.find(f => f.titolo.trim().toLowerCase() === filmTitolo.toLowerCase());
-
         if (film) {
           document.getElementById('titolo-film').textContent = film.titolo;
+          document.getElementById('regista-film').textContent = film.regista;
+          document.getElementById('anno-film').textContent = film.anno;
+          document.getElementById('genere-film').textContent = film.genere;
           document.getElementById('descrizione-film').textContent = film.descrizione;
-          document.getElementById('storia-location').textContent = film.storia;
           document.getElementById('hero').style.backgroundImage = `url(${film.immagine})`;
-
-          let carouselContainer = document.getElementById('carousel-images');
-          if (film.immagini_location && film.immagini_location.length > 0) {
-            film.immagini_location.forEach((img, index) => {
-              let activeClass = index === 0 ? 'active' : '';
-              carouselContainer.innerHTML += `
-                <div class="carousel-item ${activeClass}">
-                  <img src="${img}" class="d-block w-100" alt="Location del film">
-                </div>
-              `;
-            });
-          } else {
-            carouselContainer.innerHTML = `<p class='text-center'>Nessuna immagine disponibile per questa location.</p>`;
-          }
-
-          var map = L.map('map').setView([film.latitudine, film.longitudine], 14);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-          L.marker([film.latitudine, film.longitudine]).addTo(map).bindPopup(film.location).openPopup();
-        } else {
-          document.querySelector('.container').innerHTML = "<h2 class='text-center'>Film non trovato</h2>";
+          document.getElementById('immagine-film').src = film.immagine;
         }
       })
       .catch(error => console.error('Errore nel caricamento del film:', error));
   </script>
   
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
