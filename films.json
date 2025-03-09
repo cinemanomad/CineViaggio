@@ -89,8 +89,7 @@
     "descrizione_location": "Roma è protagonista assoluta del film, con le sue ville nobiliari, fontane e piazze storiche che rendono ogni scena un'opera d'arte.",
     "immagine": "img/la_grande_bellezza.jpg",
     "galleria": ["img/roma1.jpg", "img/roma2.jpg"]
-  }
-  [
+  },
   {
     "titolo": "La Dolce Vita",
     "regista": "Federico Fellini",
