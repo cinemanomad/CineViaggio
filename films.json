@@ -68,18 +68,5 @@
     "latitudine": 40.7370,
     "longitudine": 13.9486,
     "galleria": ["img/ischia1.jpg", "img/ischia2.jpg"]
-  },
-  {
-    "titolo": "La Vita è Bella",
-    "regista": "Roberto Benigni",
-    "anno": 1997,
-    "genere": "Drammatico",
-    "location": "Arezzo",
-    "citta": "Arezzo",
-    "regione": "Toscana",
-    "descrizione": "Un capolavoro che racconta la speranza e l'amore durante la seconda guerra mondiale.",
-    "immagine": "img/la_vita_e_bella.jpg",
-    "latitudine": 43.4633,
-    "longitudine": 11.8794,
-    "galleria": ["img/arezzo1.jpg", "img/arezzo2.jpg"]
-  },
+  }
+]
