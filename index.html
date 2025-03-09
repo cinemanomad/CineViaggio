@@ -113,6 +113,23 @@
       });
     }
 
+    function filterFilms() {
+        let searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        let selectedGenere = document.getElementById('filter-genere').value;
+        let selectedCitta = document.getElementById('filter-citta').value;
+        let selectedRegione = document.getElementById('filter-regione').value;
+
+        let filteredFilms = filmsData.filter(film => {
+            let matchesSearch = film.titolo.toLowerCase().includes(searchTerm);
+            let matchesGenere = selectedGenere === "" || film.genere === selectedGenere;
+            let matchesCitta = selectedCitta === "" || film.citta === selectedCitta;
+            let matchesRegione = selectedRegione === "" || film.regione === selectedRegione;
+            return matchesSearch && matchesGenere && matchesCitta && matchesRegione;
+        });
+
+        displayFilms(filteredFilms);
+    }
+
     function populateFilters(films) {
       let generi = new Set(), citta = new Set(), regioni = new Set();
       films.forEach(film => {
@@ -121,31 +138,20 @@
         if (film.regione) regioni.add(film.regione);
       });
 
-      let genereSelect = document.getElementById('filter-genere');
-      generi.forEach(genere => {
-        genereSelect.innerHTML += `<option value="${genere}">${genere}</option>`;
-      });
-
-      let cittaSelect = document.getElementById('filter-citta');
-      citta.forEach(citta => {
-        cittaSelect.innerHTML += `<option value="${citta}">${citta}</option>`;
-      });
-      
-      let regioneSelect = document.getElementById('filter-regione');
-      regioni.forEach(regione => {
-        regioneSelect.innerHTML += `<option value="${regione}">${regione}</option>`;
-      });
+      generi.forEach(genere => document.getElementById('filter-genere').innerHTML += `<option value="${genere}">${genere}</option>`);
+      citta.forEach(citta => document.getElementById('filter-citta').innerHTML += `<option value="${citta}">${citta}</option>`);
+      regioni.forEach(regione => document.getElementById('filter-regione').innerHTML += `<option value="${regione}">${regione}</option>`);
     }
 
-    document.getElementById('search-bar').addEventListener('input', function() {
-        let searchTerm = this.value.toLowerCase();
-        let filteredFilms = filmsData.filter(film => film.titolo.toLowerCase().includes(searchTerm));
-        displayFilms(filteredFilms);
+    document.getElementById('search-bar').addEventListener('input', filterFilms);
+    document.getElementById('filter-genere').addEventListener('change', filterFilms);
+    document.getElementById('filter-citta').addEventListener('change', filterFilms);
+    document.getElementById('filter-regione').addEventListener('change', filterFilms);
+    document.getElementById('reset-filters').addEventListener('click', () => {
+        document.querySelectorAll('select, input').forEach(el => el.value = "");
+        filterFilms();
     });
   </script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
