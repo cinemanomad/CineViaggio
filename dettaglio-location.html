@@ -3,66 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>100 Film Iconici in Italia - Dettaglio</title>
+  <title>CineViaggio - Dettaglio Location</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .map-container {
+      height: 400px;
+      margin-top: 20px;
+    }
+    .image-gallery img, .locandina img {
+      max-height: 400px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">Film in Italia</a>
-</nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CineViaggio</a>
+  </nav>
 
-<div class="container mt-5">
-  <h1 class="text-center mb-4" id="titolo-film"></h1>
-  <div class="row">
-    <div class="col-md-6">
-      <img id="immagine-film" class="img-fluid" alt="Locandina del Film">
+  <div class="container mt-5">
+    <h1 class="text-center mb-4" id="titolo-film"></h1>
+    
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h4>Locandina</h4>
+        <img id="immagine-film" class="img-fluid" alt="Locandina del Film">
+      </div>
+      <div class="col-md-8">
+        <h4>Dettagli del Film</h4>
+        <p><strong>Regista:</strong> <span id="regista-film"></span></p>
+        <p><strong>Anno:</strong> <span id="anno-film"></span></p>
+        <p><strong>Location:</strong> <span id="location-film"></span></p>
+        <p><strong>Città:</strong> <span id="citta-film"></span></p>
+        <p><strong>Regione:</strong> <span id="regione-film"></span></p>
+        <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
+      </div>
     </div>
-    <div class="col-md-6">
-      <p><strong>Regista:</strong> <span id="regista-film"></span></p>
-      <p><strong>Anno:</strong> <span id="anno-film"></span></p>
-      <p><strong>Location:</strong> <span id="location-film"></span></p>
-      <p><strong>Città:</strong> <span id="citta-film"></span></p>
-      <p><strong>Regione:</strong> <span id="regione-film"></span></p>
-      <p><strong>Descrizione:</strong> <span id="descrizione-film"></span></p>
+    
+    <div class="row mt-4">
+      <div class="col-md-4 text-center">
+        <h4>Galleria della Location</h4>
+        <div id="carouselLocation" class="carousel slide image-gallery" data-ride="carousel">
+          <div class="carousel-inner" id="carousel-images"></div>
+          <a class="carousel-control-prev" href="#carouselLocation" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselLocation" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h4>Storia della Location</h4>
+        <p id="storia-location">Caricamento della storia...</p>
+      </div>
     </div>
   </div>
-  <div id="map" style="height: 400px; margin-top: 20px;"></div>
-</div>
 
-<script>
-  function getParameterByName(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Mappa della Location</h2>
+    <div id="map" class="map-container"></div>
+  </div>
 
-  const filmTitolo = decodeURIComponent(getParameterByName('film')).trim();
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>Progetto Universitario - CineViaggio</p>
+  </footer>
 
-  fetch('films.json')
-    .then(response => response.json())
-    .then(films => {
-      let film = films.find(f => f.titolo.trim().toLowerCase() === filmTitolo.toLowerCase());
+  <script>
+    function getParameterByName(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
 
-      if (film) {
-        document.getElementById('titolo-film').textContent = film.titolo;
-        document.getElementById('regista-film').textContent = film.regista;
-        document.getElementById('anno-film').textContent = film.anno;
-        document.getElementById('location-film').textContent = film.location;
-        document.getElementById('citta-film').textContent = film.citta;
-        document.getElementById('regione-film').textContent = film.regione;
-        document.getElementById('immagine-film').src = film.immagine;
+    const filmTitolo = decodeURIComponent(getParameterByName('film')).trim();
 
-        // Mappa Leaflet
-        var map = L.map('map').setView([film.latitudine, film.longitudine], 14);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-        L.marker([film.latitudine, film.longitudine]).addTo(map).bindPopup(film.location).openPopup();
-      } else {
-        document.querySelector('.container').innerHTML = "<h2 class='text-center'>Film non trovato</h2>";
-      }
-    })
-    .catch(error => console.error('Errore nel caricamento del film:', error));
-</script>
+    fetch('films.json')
+      .then(response => response.json())
+      .then(films => {
+        let film = films.find(f => f.titolo.trim().toLowerCase() === filmTitolo.toLowerCase());
 
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        if (film) {
+          document.getElementById('titolo-film').textContent = film.titolo;
+          document.getElementById('regista-film').textContent = film.regista;
+          document.getElementById('anno-film').textContent = film.anno;
+          document.getElementById('location-film').textContent = film.location;
+          document.getElementById('citta-film').textContent = film.citta;
+          document.getElementById('regione-film').textContent = film.regione;
+          document.getElementById('descrizione-film').textContent = film.descrizione;
+          document.getElementById('immagine-film').src = film.immagine;
+
+          let carouselContainer = document.getElementById('carousel-images');
+          if (film.immagini_location && film.immagini_location.length > 0) {
+            film.immagini_location.forEach((img, index) => {
+              let activeClass = index === 0 ? 'active' : '';
+              carouselContainer.innerHTML += `
+                <div class="carousel-item ${activeClass}">
+                  <img src="${img}" class="d-block w-100" alt="Location del film">
+                </div>
+              `;
+            });
+          } else {
+            carouselContainer.innerHTML = `<p class='text-center'>Nessuna immagine disponibile per questa location.</p>`;
+          }
+
+          var map = L.map('map').setView([film.latitudine, film.longitudine], 14);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+          L.marker([film.latitudine, film.longitudine]).addTo(map).bindPopup(film.location).openPopup();
+        } else {
+          document.querySelector('.container').innerHTML = "<h2 class='text-center'>Film non trovato</h2>";
+        }
+      })
+      .catch(error => console.error('Errore nel caricamento del film:', error));
+  </script>
+  
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
