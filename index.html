@@ -1,154 +1,72 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CineViaggio - Esplora le Location del Cinema</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-  body {
-    background-color: #f8f9fa;
-  }
-  .hero-section {
-    background: url('img/colosseo2.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    text-align: center;
-    font-size: 2rem;
-  }
-  .filter-bar {
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineViaggio - Scopri le Location Iconiche del Cinema</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">CineViaggio</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
-      <li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CineViaggio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+        <li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="hero" class="hero-section text-center text-white">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Scopri le Location più Iconiche del Cinema Italiano</h1>
+      <p class="lead">Esplora le città e i luoghi che hanno fatto la storia del cinema</p>
+    </div>
+  </header>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Esplora i Film</h2>
+    <div class="row" id="film-container"></div>
   </div>
-</nav>
 
-<div class="hero-section">
-  <h1>Scopri i luoghi iconici del cinema in Italia</h1>
-</div>
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>Progetto Universitario - CineViaggio</p>
+  </footer>
 
-<div class="container mt-5">
-  <div class="row mb-3">
-    <div class="col-md-4">
-      <input type="text" id="searchInput" class="form-control" placeholder="Cerca un film o una location...">
-    </div>
-    <div class="col-md-3">
-      <select id="genreFilter" class="form-control">
-        <option value="">Tutti i generi</option>
-        <option value="Drammatico">Drammatico</option>
-        <option value="Azione">Azione</option>
-        <option value="Commedia">Commedia</option>
-        <option value="Storico">Storico</option>
-      </select>
-    </div>
-    <div class="col-md-3">
-      <select id="regionFilter" class="form-control">
-        <option value="">Tutte le regioni</option>
-        <option value="Lazio">Lazio</option>
-        <option value="Sicilia">Sicilia</option>
-        <option value="Lombardia">Lombardia</option>
-        <option value="Toscana">Toscana</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <button class="btn btn-secondary w-100" onclick="resetFilters()">Reset</button>
-    </div>
-  </div>
-  
-  <div id="film-container" class="row"></div>
-</div>
-
-<footer>
-  <p>Progetto Universitario - 100 Film Iconici Girati in Italia</p>
-</footer>
-
-<script>
-  let filmsData = [];
-
-  fetch('films.json')
-    .then(response => response.json())
-    .then(films => {
-      filmsData = films;
-      displayFilms(filmsData);
-    })
-    .catch(error => console.error('Errore nel caricamento dei film:', error));
-
-  function displayFilms(films) {
-    let container = document.getElementById('film-container');
-    container.innerHTML = '';
-    films.forEach(film => {
-      let card = `
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-lg">
-            <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
-            <div class="card-body">
-              <h5 class="card-title">${film.titolo}</h5>
-              <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
-              <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
-              <p class="card-text"><strong>Location:</strong> ${film.location}, ${film.citta}, ${film.regione}</p>
-              <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
+  <script>
+    fetch('films.json')
+      .then(response => response.json())
+      .then(films => {
+        let container = document.getElementById('film-container');
+        films.forEach(film => {
+          let card = `
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="${film.immagine}" class="card-img-top" alt="${film.titolo}">
+                <div class="card-body">
+                  <h5 class="card-title">${film.titolo}</h5>
+                  <p class="card-text"><strong>Regista:</strong> ${film.regista}</p>
+                  <p class="card-text"><strong>Anno:</strong> ${film.anno}</p>
+                  <p class="card-text"><strong>Location:</strong> ${film.location}</p>
+                  <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-primary">Scopri di più</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      `;
-      container.innerHTML += card;
-    });
-  }
-
-  function filterFilms() {
-    let query = document.getElementById('searchInput').value.toLowerCase();
-    let genre = document.getElementById('genreFilter').value;
-    let region = document.getElementById('regionFilter').value;
-    
-    let filteredFilms = filmsData.filter(film => {
-      return (
-        (film.titolo.toLowerCase().includes(query) || film.location.toLowerCase().includes(query)) &&
-        (genre === "" || film.genere === genre) &&
-        (region === "" || film.regione === region)
-      );
-    });
-    displayFilms(filteredFilms);
-  }
-
-  function resetFilters() {
-    document.getElementById('searchInput').value = "";
-    document.getElementById('genreFilter').value = "";
-    document.getElementById('regionFilter').value = "";
-    displayFilms(filmsData);
-  }
-
-  document.getElementById('searchInput').addEventListener('input', filterFilms);
-  document.getElementById('genreFilter').addEventListener('change', filterFilms);
-  document.getElementById('regionFilter').addEventListener('change', filterFilms);
-</script>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          `;
+          container.innerHTML += card;
+        });
+      })
+      .catch(error => console.error('Errore nel caricamento dei film:', error));
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
