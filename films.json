@@ -48,7 +48,7 @@
     "regione": "Lazio",
     "descrizione": "Un generale romano diventa gladiatore per vendicare la sua famiglia.",
     "descrizione_location": "Il Colosseo, simbolo di Roma, è stato ricostruito digitalmente per le epiche scene di combattimento del film. È il più grande anfiteatro del mondo.",
-    "immagine": "img/gladiatore.jpg",
+    "immagine": "img/loc_gladiatore.jpg",
     "galleria": ["img/colosseo1.jpg", "img/colosseo2.jpg"]
   },
   {
