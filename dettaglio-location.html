@@ -112,6 +112,8 @@
             document.getElementById('descrizione-film').textContent = film.descrizione;
             document.getElementById('descrizione-location').textContent = film.descrizione_location;
             
+            document.getElementById('hero').style.backgroundImage = `url(${film.hero_image || film.immagine})`;
+            
             let carouselInner = document.getElementById('carousel-images');
             carouselInner.innerHTML = film.galleria.slice(0, 2).map((img, index) => `
               <div class="carousel-item ${index === 0 ? 'active' : ''}">
@@ -129,8 +131,7 @@
                 .openPopup();
             }
           }
-        })
-        .catch(error => console.error('❌ Errore nel caricamento del film:', error));
+        });
     });
   </script>
 </body>
