@@ -24,8 +24,8 @@
     "regione": "Sicilia",
     "descrizione": "La storia della famiglia Corleone e del suo dominio sulla mafia italoamericana.",
     "descrizione_location": "Savoca è stata scelta per le riprese siciliane del film, con il famoso Bar Vitelli, che oggi è una meta turistica.",
-    "immagine": "img/loc_il_padrino.jpg",
-    "galleria": ["img/bar-padrino.jpeg.webp", "img/trevi3.jpg"],
+    "immagine": "img/img_ilpadrino/locandina.jpg",
+    "galleria": ["img/img_ilpadrino/location.jpg", "img/img_ilpadrino/location1.jpg"],
     "latitudine": 37.9436,
     "longitudine": 15.3282
   },
