@@ -93,32 +93,6 @@
     "galleria": ["img/roma1.jpg", "img/roma2.jpg"]
   },
   {
-    "titolo": "La Dolce Vita",
-    "regista": "Federico Fellini",
-    "anno": 1960,
-    "genere": "Drammatico",
-    "location": "Fontana di Trevi",
-    "citta": "Roma",
-    "regione": "Lazio",
-    "descrizione": "Un giornalista vive la dolce vita di Roma tra feste e incontri inaspettati.",
-    "descrizione_location": "La Fontana di Trevi è uno dei luoghi più iconici di Roma, resa immortale dalla scena con Anita Ekberg. Costruita nel XVIII secolo, è una delle fontane più famose al mondo.",
-    "immagine": "img/fontanaditrevi.jpg",
-    "galleria": ["img/trevi1.jpg", "img/trevi2.jpg", "img/trevi3.jpg"]
-  },
-  {
-    "titolo": "Il Padrino",
-    "regista": "Francis Ford Coppola",
-    "anno": 1972,
-    "genere": "Crime",
-    "location": "Savoca, Bar Vitelli",
-    "citta": "Savoca",
-    "regione": "Sicilia",
-    "descrizione": "La storia della famiglia Corleone e del suo dominio sulla mafia italoamericana.",
-    "descrizione_location": "Savoca è stata scelta per le riprese siciliane del film, con il famoso Bar Vitelli, che oggi è una meta turistica per gli appassionati della saga.",
-    "immagine": "img/padrino.jpg",
-    "galleria": ["img/savoca1.jpg", "img/savoca2.jpg", "img/savoca3.jpg"]
-  },
-  {
     "titolo": "Il Gattopardo",
     "regista": "Luchino Visconti",
     "anno": 1963,
