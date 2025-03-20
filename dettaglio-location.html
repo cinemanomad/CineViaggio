@@ -57,6 +57,21 @@
   </div>
 
   <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">📸 Galleria della Location</h2>
+    <div id="carouselLocation" class="carousel slide image-gallery shadow-lg rounded" data-ride="carousel">
+      <div class="carousel-inner" id="carousel-images"></div>
+      <a class="carousel-control-prev" href="#carouselLocation" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselLocation" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container mt-5">
     <h2 class="text-center mb-4 text-primary">📍 Informazioni sulla Location</h2>
     <p id="descrizione-location" class="text-justify"></p>
   </div>
@@ -97,7 +112,22 @@
             document.getElementById('descrizione-film').textContent = film.descrizione;
             document.getElementById('descrizione-location').textContent = film.descrizione_location;
             
-            document.getElementById('hero').style.backgroundImage = `url(${film.immagine})`;
+            let carouselInner = document.getElementById('carousel-images');
+            carouselInner.innerHTML = film.galleria.slice(0, 2).map((img, index) => `
+              <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                <img src="${img}" class="d-block w-100 rounded shadow-lg" alt="Location">
+              </div>
+            `).join('');
+            
+            if (film.latitudine && film.longitudine) {
+              var map = L.map('map').setView([film.latitudine, film.longitudine], 13);
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+              }).addTo(map);
+              L.marker([film.latitudine, film.longitudine]).addTo(map)
+                .bindPopup(`<b>${film.titolo}</b><br>${film.location}`)
+                .openPopup();
+            }
           }
         })
         .catch(error => console.error('❌ Errore nel caricamento del film:', error));
