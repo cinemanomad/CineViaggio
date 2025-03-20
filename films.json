@@ -10,6 +10,7 @@
     "descrizione": "Un giornalista vive la dolce vita di Roma tra feste e incontri inaspettati.",
     "descrizione_location": "La Fontana di Trevi è uno dei luoghi più iconici di Roma, resa immortale dalla scena con Anita Ekberg.",
     "immagine": "img/loc_dolce_vita.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/fontanaditrevi.jpg", "img/trevi2.jpg", "img/trevi3.jpg"],
     "latitudine": 41.9009,
     "longitudine": 12.4833
@@ -25,6 +26,7 @@
     "descrizione": "La storia della famiglia Corleone e del suo dominio sulla mafia italoamericana.",
     "descrizione_location": "Savoca è stata scelta per le riprese siciliane del film, con il famoso Bar Vitelli, che oggi è una meta turistica.",
     "immagine": "img/img_ilpadrino/locandina.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/img_ilpadrino/location.jpg", "img/img_ilpadrino/location1.jpg"],
     "latitudine": 37.9436,
     "longitudine": 15.3282
@@ -40,6 +42,7 @@
     "descrizione": "Un ragazzo cresce in un piccolo paese siciliano, affascinato dalla magia del cinema.",
     "descrizione_location": "Palazzo Adriano ospita la piazza centrale del film, con il famoso cinema che è diventato un simbolo della pellicola.",
     "immagine": "img/nuovo_cinema_paradiso.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/palazzo_adriano1.jpg", "img/palazzo_adriano2.jpg"],
     "latitudine": 37.6692,
     "longitudine": 13.3666
@@ -55,6 +58,7 @@
     "descrizione": "Un generale romano diventa gladiatore per vendicare la sua famiglia.",
     "descrizione_location": "Il Colosseo, simbolo di Roma, è stato ricostruito digitalmente per le epiche scene di combattimento.",
     "immagine": "img/locandina3.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/colosseo1.jpg", "img/colosseo2.jpg"],
     "latitudine": 41.8902,
     "longitudine": 12.4922
@@ -70,6 +74,7 @@
     "descrizione": "Una storia d'amore estiva tra un giovane studente e uno studioso americano.",
     "descrizione_location": "Le riprese si sono svolte nella campagna cremasca, con paesaggi incantevoli.",
     "immagine": "img/call_me_by_your_name.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/crema1.jpg", "img/crema2.jpg"],
     "latitudine": 45.3646,
     "longitudine": 9.6808
@@ -85,6 +90,7 @@
     "descrizione": "Un postino instaura un'amicizia con il poeta Pablo Neruda.",
     "descrizione_location": "Procida, con i suoi colori pastello e il mare cristallino, è il perfetto sfondo per questa toccante storia di amicizia e poesia.",
     "immagine": "img/il_postino.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/procida1.jpg", "img/procida2.jpg"],
     "latitudine": 40.7649,
     "longitudine": 14.0311
@@ -100,6 +106,7 @@
     "descrizione": "Un viaggio tra la mondanità e la bellezza nascosta di Roma.",
     "descrizione_location": "Roma è protagonista assoluta del film, con le sue ville nobiliari, fontane e piazze storiche che rendono ogni scena un'opera d'arte.",
     "immagine": "img/la_grande_bellezza.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/roma1.jpg", "img/roma2.jpg"],
     "latitudine": 41.9029,
     "longitudine": 12.4964
@@ -115,6 +122,7 @@
     "descrizione": "La decadenza dell'aristocrazia siciliana durante il Risorgimento italiano.",
     "descrizione_location": "Palazzo Gangi, celebre per il suo magnifico Salone degli Specchi, è stato la location della famosa scena del ballo.",
     "immagine": "img/gattopardo.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/palermo1.jpg", "img/palermo2.jpg"],
     "latitudine": 38.1157,
     "longitudine": 13.3615
@@ -130,6 +138,7 @@
     "descrizione": "Una storia di resistenza durante l'occupazione nazista di Roma.",
     "descrizione_location": "Le strade e i quartieri di Roma sono stati protagonisti di questa pellicola neorealista.",
     "immagine": "img/roma_citta_aperta.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/roma_citta1.jpg", "img/roma_citta2.jpg"],
     "latitudine": 41.9028,
     "longitudine": 12.4964
@@ -145,6 +154,7 @@
     "descrizione": "Un uomo e suo figlio cercano disperatamente una bicicletta rubata.",
     "descrizione_location": "Le strade di Roma sono il teatro di questa intensa storia di povertà e disperazione.",
     "immagine": "img/ladri_di_biciclette.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/ladri1.jpg", "img/ladri2.jpg"],
     "latitudine": 41.8955,
     "longitudine": 12.4823
@@ -160,6 +170,7 @@
     "descrizione": "Un padre usa il suo umorismo per proteggere il figlio dagli orrori della guerra.",
     "descrizione_location": "Il centro storico di Arezzo è stato scelto per le sue strade pittoresche e il fascino rinascimentale.",
     "immagine": "img/la_vita_e_bella.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/arezzo1.jpg", "img/arezzo2.jpg"],
     "latitudine": 43.4633,
     "longitudine": 11.8793
@@ -175,6 +186,7 @@
     "descrizione": "Un gruppo di soldati italiani si ritrova bloccato su un'isola greca durante la Seconda Guerra Mondiale.",
     "descrizione_location": "L'isola di Kastellorizo, con il suo mare cristallino e le case colorate, è stata il perfetto scenario per questo film.",
     "immagine": "img/mediterraneo.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/kastellorizo1.jpg", "img/kastellorizo2.jpg"],
     "latitudine": 36.1515,
     "longitudine": 29.5906
@@ -190,6 +202,7 @@
     "descrizione": "Un viaggio on the road attraverso l'Italia degli anni '60.",
     "descrizione_location": "Le scene del film si svolgono lungo la Via Aurelia, tra il Lazio e la Toscana.",
     "immagine": "img/il_sorpasso.jpg",
+    "hero_image": "img/hero_la_grande_bellezza.jpg",
     "galleria": ["img/via_aurelia1.jpg", "img/via_aurelia2.jpg"],
     "latitudine": 42.1653,
     "longitudine": 11.9731
