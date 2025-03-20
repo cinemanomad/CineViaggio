@@ -31,6 +31,37 @@
   </header>
 
   <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img id="immagine-film" class="img-fluid shadow-lg rounded" alt="Locandina del Film">
+      </div>
+      <div class="col-md-8">
+        <h2 class="mb-3 text-primary">🎞️ Dettagli del Film</h2>
+        <div class="card shadow-lg p-3">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>🎬 Regista:</strong> <span id="regista-film"></span></li>
+            <li class="list-group-item"><strong>📅 Anno:</strong> <span id="anno-film"></span></li>
+            <li class="list-group-item"><strong>🎭 Genere:</strong> <span id="genere-film"></span></li>
+            <li class="list-group-item"><strong>📍 Location:</strong> <span id="location-film"></span></li>
+            <li class="list-group-item"><strong>🏙️ Città:</strong> <span id="citta-film"></span></li>
+            <li class="list-group-item"><strong>🗺️ Regione:</strong> <span id="regione-film"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">📖 Trama</h2>
+    <p id="descrizione-film" class="text-justify"></p>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">📍 Informazioni sulla Location</h2>
+    <p id="descrizione-location" class="text-justify"></p>
+  </div>
+
+  <div class="container mt-5">
     <h2 class="text-center mb-4 text-primary">🗺️ Mappa della Location</h2>
     <div id="map" class="map-container shadow-lg rounded"></div>
   </div>
@@ -56,13 +87,22 @@
           
           if (film) {
             document.getElementById('titolo-film').textContent = film.titolo;
+            document.getElementById('regista-film').textContent = film.regista;
+            document.getElementById('anno-film').textContent = film.anno;
+            document.getElementById('genere-film').textContent = film.genere;
+            document.getElementById('location-film').textContent = film.location;
+            document.getElementById('citta-film').textContent = film.citta;
+            document.getElementById('regione-film').textContent = film.regione;
+            document.getElementById('descrizione-film').textContent = film.descrizione;
+            document.getElementById('descrizione-location').textContent = film.descrizione_location;
+            document.getElementById('hero').style.backgroundImage = `url(${film.immagine})`;
+            document.getElementById('immagine-film').src = film.immagine;
             
             if (film.latitudine && film.longitudine) {
               var map = L.map('map').setView([film.latitudine, film.longitudine], 13);
               L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; OpenStreetMap contributors'
               }).addTo(map);
-
               L.marker([film.latitudine, film.longitudine]).addTo(map)
                 .bindPopup(`<b>${film.titolo}</b><br>${film.location}`)
                 .openPopup();
