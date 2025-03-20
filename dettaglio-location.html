@@ -56,6 +56,16 @@
     <p id="descrizione-film" class="text-justify"></p>
   </div>
 
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">📍 Informazioni sulla Location</h2>
+    <p id="descrizione-location" class="text-justify"></p>
+  </div>
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4 text-primary">🗺️ Mappa della Location</h2>
+    <div id="map" class="map-container shadow-lg rounded"></div>
+  </div>
+
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>🎬 Progetto Universitario - CineViaggio</p>
   </footer>
@@ -85,6 +95,7 @@
             document.getElementById('citta-film').textContent = film.citta;
             document.getElementById('regione-film').textContent = film.regione;
             document.getElementById('descrizione-film').textContent = film.descrizione;
+            document.getElementById('descrizione-location').textContent = film.descrizione_location;
             
             document.getElementById('hero').style.backgroundImage = `url(${film.immagine})`;
           }
