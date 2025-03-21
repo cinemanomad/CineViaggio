@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Project Plan - CineViaggio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #a83232;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .wireframe {
+            margin: 2rem 0;
+        }
+        .wireframe img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Project Plan – CineViaggio</h1>
+
+    <h2>1. Brief di progetto</h2>
+    <p><strong>Titolo progetto</strong>: CineViaggio</p>
+    <p><strong>Obiettivo</strong>: Creare una piattaforma web che permetta di esplorare le location cinematografiche iconiche in Italia (e nel mondo) attraverso una mappa interattiva, schede dettagliate e contenuti visuali.</p>
+    <p><strong>Target</strong>: Appassionati di cinema, viaggiatori, studenti DAMS, turisti, studiosi di media.</p>
+    <p><strong>Funzionalità principali</strong>:</p>
+    <ul>
+        <li>Navigazione tra i film per genere, regione, città</li>
+        <li>Mappa interattiva dei luoghi di ripresa</li>
+        <li>Gallerie fotografiche</li>
+        <li>Ricerca avanzata</li>
+        <li>Trame e dettagli</li>
+    </ul>
+
+    <h2>2. Benchmarking</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr><th>Sito</th><th>Caratteristiche</th><th>Differenze</th></tr>
+        <tr><td><a href="https://www.setjetting.com/">SetJetting.com</a></td><td>Mappa delle location, schede film</td><td>CineViaggio è in italiano, pensato per valorizzare il patrimonio culturale locale</td></tr>
+        <tr><td><a href="https://www.atlasofwonders.com/">Atlas of Wonders</a></td><td>Analisi location di film famosi</td><td>CineViaggio è interattivo e basato su mappa + filtraggio</td></tr>
+    </table>
+
+    <h2>3. Struttura del sito</h2>
+    <ul>
+        <li><strong>Home</strong>: introduzione, film in evidenza, accesso alle sezioni</li>
+        <li><strong>Collezione</strong>: elenco di tutti i film, filtrabile</li>
+        <li><strong>Scheda film</strong>: dettagli, mappa, immagini</li>
+        <li><strong>Mappa</strong>: esplora tutti i film tramite localizzazione</li>
+    </ul>
+    <pre>
+Home
+├── Collezione
+│   ├── Ricerca
+│   ├── Filtri (genere, città, regione)
+├── Mappa
+├── Scheda Film
+│   ├── Dati (regista, anno, descrizione)
+│   ├── Mappa location
+│   ├── Galleria immagini
+    </pre>
+
+    <h2>4. Wireframe</h2>
+    <div class="wireframe">
+        <p><strong>Home Page</strong></p>
+        <img src="wireframe-cineviaggio.pdf" alt="Wireframe Home Page (vedi PDF)">
+    </div>
+    <div class="wireframe">
+        <p><strong>Pagina Collezione</strong></p>
+        <img src="wireframe-cineviaggio.pdf" alt="Wireframe Collezione (vedi PDF)">
+    </div>
+    <div class="wireframe">
+        <p><strong>Dettaglio Film</strong></p>
+        <img src="wireframe-cineviaggio.pdf" alt="Wireframe Dettaglio (vedi PDF)">
+    </div>
+
+    <h2>5. Scelte di design e usabilità</h2>
+    <ul>
+        <li><strong>Colori</strong>: palette cinema-classico (nero, rosso, oro)</li>
+        <li><strong>Font</strong>: Arial / Roboto per leggibilità</li>
+        <li><strong>Layout</strong>: responsive con Bootstrap</li>
+        <li><strong>Accessibilità</strong>: uso di alt, buon contrasto, struttura chiara</li>
+    </ul>
+
+    <h2>6. Servizi e Tools usati</h2>
+    <ul>
+        <li>Leaflet.js per la mappa</li>
+        <li>Bootstrap per la UI</li>
+        <li>JavaScript per il caricamento dinamico</li>
+        <li>JSON come base dati</li>
+        <li>Dublin Core per i metadati</li>
+        <li>Filtri e ricerca per il browsing</li>
+        <li>Integrazioni in corso: Google Analytics, breadcrumbs, accordion</li>
+    </ul>
+
+    <h2>7. Sitografia / Bibliografia</h2>
+    <ul>
+        <li><a href="https://www.openstreetmap.org">OpenStreetMap</a></li>
+        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+        <li><a href="https://leafletjs.com">Leaflet.js</a></li>
+        <li>Fonti immagini: Pexels, Wikimedia Commons, locandine ufficiali</li>
+        <li>Siti di ispirazione: SetJetting.com, AtlasOfWonders.com</li>
+    </ul>
+
+</body>
+</html>
