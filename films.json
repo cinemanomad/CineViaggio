@@ -106,7 +106,7 @@
     "descrizione": "Un viaggio tra la mondanità e la bellezza nascosta di Roma.",
     "descrizione_location": "Roma è protagonista assoluta del film, con le sue ville nobiliari, fontane e piazze storiche che rendono ogni scena un'opera d'arte.",
     "immagine": "img/la grande bellezza/locandina.jpg",
-    "hero_image": "img/la grande bellezza/locandina.jpg",
+    "hero_image": "img/la grande bellezza/hero.jpg",
     "galleria": ["img/roma1.jpg", "img/roma2.jpg"],
     "latitudine": 41.9029,
     "longitudine": 12.4964
