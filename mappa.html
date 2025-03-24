@@ -29,6 +29,10 @@
       color: #dc3545;
       text-decoration: underline;
     }
+    .custom-div-icon {
+      text-align: center;
+      line-height: 1;
+    }
   </style>
 </head>
 <body>
@@ -68,12 +72,36 @@
   <!-- SCRIPT -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script>
+    // Inizializza mappa centrata sull’Italia
     var map = L.map('map').setView([41.8719, 12.5674], 6);
 
+    // Carica tile
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // Icone per genere
+    function getCustomIcon(genere) {
+      const emojiMap = {
+        "Commedia": "🎭",
+        "Drammatico": "🎬",
+        "Storico": "🏛️",
+        "Romantico": "❤️",
+        "Crime": "🔫"
+      };
+
+      const emoji = emojiMap[genere] || "🎞️";
+
+      return L.divIcon({
+        html: `<div style="font-size: 1.5rem;">${emoji}</div>`,
+        className: "custom-div-icon",
+        iconSize: [30, 42],
+        iconAnchor: [15, 42],
+        popupAnchor: [0, -35]
+      });
+    }
+
+    // Caricamento dati dal JSON
     fetch('films.json')
       .then(response => response.json())
       .then(data => {
@@ -87,9 +115,11 @@
                 <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}">➡️ Vai alla scheda</a>
               </div>
             `;
-            L.marker([film.latitudine, film.longitudine])
-              .addTo(map)
-              .bindPopup(popupHTML);
+            const marker = L.marker(
+              [film.latitudine, film.longitudine],
+              { icon: getCustomIcon(film.genere) }
+            ).addTo(map);
+            marker.bindPopup(popupHTML);
           }
         });
       })
@@ -98,3 +128,4 @@
 
 </body>
 </html>
+
