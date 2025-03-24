@@ -10,18 +10,22 @@
     #map { height: 100vh; width: 100vw; }
     .popup-content img {
       width: 100%;
-      max-height: 120px;
+      max-height: 150px;
       object-fit: cover;
       border-radius: 5px;
+      margin-bottom: 5px;
     }
     .popup-content h5 {
-      margin: 5px 0 0 0;
+      margin: 5px 0;
       font-size: 1rem;
       font-weight: bold;
     }
-    .custom-div-icon {
-      text-align: center;
-      font-size: 1.5rem;
+    .popup-content a {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #dc3545;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -37,48 +41,28 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  function getCustomIcon(genere) {
-    const emojiMap = {
-      "Commedia": "🎭",
-      "Drammatico": "🎬",
-      "Storico": "🏛️",
-      "Romantico": "❤️",
-      "Crime": "🔫"
-    };
-    const emoji = emojiMap[genere] || "🎞️";
-    return L.divIcon({
-      html: `<div>${emoji}</div>`,
-      className: "custom-div-icon",
-      iconSize: [30, 42],
-      iconAnchor: [15, 42],
-      popupAnchor: [0, -35]
-    });
-  }
-
   fetch('films.json')
     .then(res => res.json())
     .then(data => {
       data.forEach(film => {
         if (film.latitudine && film.longitudine) {
-          const marker = L.marker([film.latitudine, film.longitudine], {
-            icon: getCustomIcon(film.genere)
-          }).addTo(map);
-
           const popupHTML = `
             <div class="popup-content">
-              <img src="${film.immagine}" alt="${film.titolo}">
+              <img src="${film.immagine}" alt="Locandina di ${film.titolo}">
               <h5>${film.titolo}</h5>
-              <p><strong>${film.location}</strong></p>
+              <p><strong>📍 ${film.location}</strong></p>
               <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}">➡️ Vai alla scheda</a>
             </div>
           `;
-          marker.bindPopup(popupHTML);
+          L.marker([film.latitudine, film.longitudine])
+            .addTo(map)
+            .bindPopup(popupHTML);
         }
       });
     })
     .catch(err => {
-      console.error("Errore nel caricamento del JSON:", err);
-      alert("Errore nel caricamento del file films.json. Assicurati che sia nella stessa cartella.");
+      console.error("Errore nel caricamento di films.json:", err);
+      alert("Errore nel caricamento del file films.json. Verifica che il file sia presente e corretto.");
     });
 </script>
 
