@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -7,12 +7,34 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
   <style>
     #map { height: 600px; }
+    .popup-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    .popup-content h5 {
+      margin: 5px 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .popup-content a {
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-top: 4px;
+      color: #dc3545;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="index.html">🎬 CineViaggio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -20,28 +42,34 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="collezione.html">Collezione</a></li>
+        <li class="nav-item"><a class="nav-link" href="collezione.html">Catalogo</a></li>
         <li class="nav-item active"><a class="nav-link" href="mappa.html">Mappa</a></li>
+        <li class="nav-item"><a class="nav-link" href="web-project-plan.html">Web Project Plan</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- HEADER -->
   <header class="hero-section text-white text-center" style="background-color: #333; padding: 120px 20px 60px;">
     <h1 class="display-4 font-weight-bold">🗺️ Mappa delle Location Cinematografiche</h1>
     <p>Scopri dove sono stati girati i film presenti nella nostra collezione</p>
   </header>
 
+  <!-- MAPPA -->
   <div class="container mt-4">
     <div id="map" class="map-container shadow-lg rounded"></div>
   </div>
 
+  <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>🎬 Progetto Universitario - CineViaggio</p>
   </footer>
 
+  <!-- SCRIPT -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script>
     var map = L.map('map').setView([41.8719, 12.5674], 6);
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
@@ -51,12 +79,22 @@
       .then(data => {
         data.forEach(film => {
           if (film.latitudine && film.longitudine) {
-            const marker = L.marker([film.latitudine, film.longitudine]).addTo(map);
-            marker.bindPopup(`<b>${film.titolo}</b><br>${film.location}`);
+            const popupHTML = `
+              <div class="popup-content">
+                <img src="${film.immagine}" alt="${film.titolo}">
+                <h5>${film.titolo}</h5>
+                <p><strong>📍 ${film.location}</strong></p>
+                <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}">➡️ Vai alla scheda</a>
+              </div>
+            `;
+            L.marker([film.latitudine, film.longitudine])
+              .addTo(map)
+              .bindPopup(popupHTML);
           }
         });
       })
       .catch(error => console.error('Errore nel caricamento delle location:', error));
   </script>
+
 </body>
 </html>
