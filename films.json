@@ -41,9 +41,9 @@
     "regione": "Sicilia",
     "descrizione": "Un ragazzo cresce in un piccolo paese siciliano, affascinato dalla magia del cinema.",
     "descrizione_location": "Palazzo Adriano ospita la piazza centrale del film, con il famoso cinema che è diventato un simbolo della pellicola.",
-    "immagine": "img/nuovo_cinema_paradiso.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/palazzo_adriano1.jpg", "img/palazzo_adriano2.jpg"],
+    "immagine": "img/nuovo cinema paradiso/locandina.jpg",
+    "hero_image": "img/nuovo cinema paradiso/hero.jpg",
+    "galleria": ["img/nuovo cinema paradiso/location.jpg", "img/location.jpg"],
     "latitudine": 37.6692,
     "longitudine": 13.3666
   },
