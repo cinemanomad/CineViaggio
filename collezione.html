@@ -1,74 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineViaggio - Collezione</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+<meta charset="utf-8"/>
+<!-- Metadati Dublin Core -->
+<meta content="CineViaggio" name="DC.Title">
+<meta content="Ayca Kaya" name="DC.Creator"/>
+<meta content="Location cinematografiche in Italia" name="DC.Subject"/>
+<meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description"/>
+<meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher"/>
+<meta content="2025-03-31" name="DC.Date"/>
+<meta content="Website" name="DC.Type"/>
+<meta content="text/html" name="DC.Format"/>
+<meta content="it" name="DC.Language"/>
+<meta content="https://tuosito.github.io" name="DC.Identifier"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CineViaggio - Collezione</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+</meta></head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html">CineViaggio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item active"><a class="nav-link" href="collezione.html">Collezione</a></li>
-        <li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <header id="hero" class="hero-section text-center text-white" style="background-image: url('img/colosseo1.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Scopri le Location più Iconiche del Cinema Italiano</h1>
-      <p class="lead">Esplora le città e i luoghi che hanno fatto la storia del cinema</p>
-    </div>
-  </header>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<a class="navbar-brand" href="index.html">CineViaggio</a>
+<button class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item active"><a class="nav-link" href="collezione.html">Collezione</a></li>
+<li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
+</ul>
+</div>
+</nav>
+<header class="hero-section text-center text-white" id="hero" style="background-image: url('img/colosseo1.jpg');">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Scopri le Location più Iconiche del Cinema Italiano</h1>
+<p class="lead">Esplora le città e i luoghi che hanno fatto la storia del cinema</p>
+</div>
+</header>
+<div class="container mt-5">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb bg-white px-3 py-2 rounded shadow-sm">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Collezione</li>
+</ol>
+</nav>
 
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Esplora i Film</h2>
-    
-    <div class="row mb-4">
-      <div class="col-md-3">
-        <select id="filter-genere" class="form-control">
-          <option value="">Tutti i generi</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <select id="filter-citta" class="form-control">
-          <option value="">Tutte le città</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <select id="filter-regione" class="form-control">
-          <option value="">Tutte le regioni</option>
-        </select>
-      </div>
-      <div class="col-md-2">
-        <button class="btn btn-secondary w-100" id="reset-filters">Reset</button>
-      </div>
-    </div>
-    
-    <div class="row mb-4">
-      <div class="col-md-12">
-        <input type="text" id="search-bar" class="form-control" placeholder="Cerca un film...">
-      </div>
-    </div>
-    
-    <div class="row" id="film-container"></div>
-  </div>
-
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>Progetto Universitario - CineViaggio</p>
-  </footer>
-
-
-  <script>
+<h2 class="text-center mb-4">Esplora i Film</h2>
+<div class="row mb-4">
+<div class="col-md-3">
+<select class="form-control" id="filter-genere">
+<option value="">Tutti i generi</option>
+</select>
+</div>
+<div class="col-md-3">
+<select class="form-control" id="filter-citta">
+<option value="">Tutte le città</option>
+</select>
+</div>
+<div class="col-md-3">
+<select class="form-control" id="filter-regione">
+<option value="">Tutte le regioni</option>
+</select>
+</div>
+<div class="col-md-2">
+<button class="btn btn-secondary w-100" id="reset-filters">Reset</button>
+</div>
+</div>
+<div class="row mb-4">
+<div class="col-md-12">
+<input class="form-control" id="search-bar" placeholder="Cerca un film..." type="text"/>
+</div>
+</div>
+<div class="row" id="film-container"></div>
+</div>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+<p>Progetto Universitario - CineViaggio</p>
+</footer>
+<script>
     let filmsData = [];
 
     fetch('films.json')
@@ -150,9 +161,8 @@
       displayFilms(filteredFilms);
     }
   </script>
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
