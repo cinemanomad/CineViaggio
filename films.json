@@ -57,8 +57,8 @@
     "regione": "Lazio",
     "descrizione": "Il Gladiatore (2000), diretto da Ridley Scott, racconta la storia di Massimo Decimo Meridio, un valoroso generale romano tradito dall’ambizioso Commodo, figlio dell’imperatore Marco Aurelio. Dopo l’assassinio della sua famiglia, Massimo viene ridotto in schiavitù e costretto a combattere come gladiatore. Animato dal desiderio di vendetta e giustizia, conquista fama nell’arena fino a sfidare il potere corrotto dell’Impero. È un epico racconto di onore, perdita e redenzione.",
     "descrizione_location": "Il Colosseo, simbolo di Roma, è stato ricostruito digitalmente per le epiche scene di combattimento.",
-    "immagine": "img/locandina3.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
+    "immagine": "img/gladiatore/locandina.jpg",
+    "hero_image": "img/gladiatore/hero.jpg",
     "galleria": ["img/colosseo1.jpg", "img/colosseo2.jpg"],
     "latitudine": 41.8902,
     "longitudine": 12.4922
