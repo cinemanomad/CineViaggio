@@ -222,5 +222,21 @@
     "galleria": ["img/the talented Mr.Ripley/location.jpg", "img/the_talented_mr_ripley/venezia1.jpg"],
     "latitudine": 40.7592,
     "longitudine": 14.0321
-  }
+  },
+  {
+  "titolo": "The English Patient",
+  "regista": "Anthony Minghella",
+  "anno": 1996,
+  "genere": "Drammatico, Romantico",
+  "location": "Toscana (Monteriggioni, Pienza), Deserto del Sahara",
+  "citta": "Pienza",
+  "regione": "Toscana",
+  "descrizione": "The English Patient (1996), vincitore di 9 premi Oscar, è un epico racconto d’amore e di memoria ambientato durante la Seconda Guerra Mondiale. Il film narra la storia di un misterioso uomo gravemente ustionato, assistito da un’infermiera canadese in un monastero abbandonato. Attraverso una serie di flashback, si scoprono le sue passioni, il suo passato e l’amore tragico che ha segnato la sua vita.",
+  "descrizione_location": "Molte delle scene italiane sono state girate tra le colline della Val d’Orcia, in Toscana. Pienza e Monteriggioni sono tra i borghi che fanno da sfondo ai momenti più intensi e poetici del film, con paesaggi che evocano un senso di bellezza sospesa e malinconica.",
+  "immagine": "img/the english patient/locandina.jpg",
+  "hero_image": "img/the english patient/hero.jpg",
+  "galleria": ["img/the english patient/location.jpg.webp","img/the_english_patient/monteriggioni.jpg"],
+  "latitudine": 43.0786,
+  "longitudine": 11.6782
+}
 ]
