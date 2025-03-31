@@ -295,5 +295,24 @@
   ],
   "latitudine": 37.0755,
   "longitudine": 15.2866
+},
+  {
+  "titolo": "The Italian Job",
+  "regista": "F. Gary Gray",
+  "anno": 2003,
+  "genere": "Azione, Crimine",
+  "location": "Venezia",
+  "citta": "Venezia",
+  "regione": "Veneto",
+  "descrizione": "The Italian Job (2003), remake dell’omonimo film del 1969, è un adrenalinico heist movie diretto da F. Gary Gray. La trama ruota attorno a una rapina spettacolare e a un piano di vendetta orchestrato da un gruppo di ladri professionisti. La sequenza d’apertura è ambientata tra i canali e i ponti di Venezia, dove si svolge un colpo mozzafiato che dà inizio all’azione frenetica del film.",
+  "descrizione_location": "Venezia è protagonista dell’intera sequenza iniziale: le riprese sono state effettuate tra il Canal Grande, Piazza San Marco e vari ponti e vicoli iconici della città. L’uso delle Mini Cooper e degli inseguimenti tra le calli e i canali offre una visione dinamica e insolita della città lagunare.",
+  "immagine": "img/the italian job/locandina.jpg",
+  "hero_image": "img/the italian job/hero.jpg.webp",
+  "galleria": [
+    "img/the italian job/location.jpg",
+    "img/the_italian_job/canalgrande.jpg"
+  ],
+  "latitudine": 45.4408,
+  "longitudine": 12.3155
 }
 ]
