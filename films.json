@@ -217,7 +217,7 @@
     "descrizione": "The Talented Mr. Ripley (1999), diretto da Anthony Minghella e tratto dal romanzo di Patricia Highsmith, è un thriller psicologico ambientato in una suggestiva Italia anni '50. Il protagonista, Tom Ripley, un giovane ambizioso ma senza scrupoli, viene inviato in Europa per convincere Dickie Greenleaf a tornare negli Stati Uniti. L’incontro innescherà un gioco pericoloso di inganni, identità rubate e ambiguità morale. Il film è celebre per le sue atmosfere eleganti e i paesaggi italiani mozzafiato.",
     "descrizione_location": "Le riprese si sono svolte tra Ischia, Procida, Venezia e Roma. Le stradine di Procida rappresentano Mongibello, la città immaginaria dove vive Dickie. Alcune scene sono girate anche a Piazza Navona e al Foro Romano.",
     "immagine": "img/the talented Mr.Ripley/locandina.jpg",
-    "hero_image": "img/the talented Mr.Ripley",
+    "hero_image": "img/the talented Mr.Ripley/hero.jpg.png",
     "galleria": ["img/mempris/location.jpg", "img/via_aurelia2.jpg"],
     "galleria": ["img/the talented Mr.Ripley/location.jpg", "img/the_talented_mr_ripley/venezia1.jpg"],
     "latitudine": 40.7592,
