@@ -137,9 +137,9 @@
     "regione": "Lazio",
     "descrizione": "Roma Città Aperta (1945), diretto da Roberto Rossellini, è uno dei film simbolo del neorealismo italiano. Ambientato nella Roma occupata dai nazisti durante la Seconda Guerra Mondiale, racconta la resistenza del popolo romano attraverso le storie di Don Pietro, un coraggioso prete, e Pina, una donna del popolo. Il film mostra con crudezza e umanità la lotta per la libertà, il sacrificio e il dolore vissuto durante l’occupazione, diventando un potente atto di denuncia e memoria.",
     "descrizione_location": "Le strade e i quartieri di Roma sono stati protagonisti di questa pellicola neorealista.",
-    "immagine": "img/roma_citta_aperta.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/roma_citta1.jpg", "img/roma_citta2.jpg"],
+    "immagine": "img/roma citta aperta/locandina.jpg",
+    "hero_image": "img/roma citta aperta/hero.jpg",
+    "galleria": ["img/roma citta aperta/location1.jpg", "img/roma_citta2.jpg"],
     "latitudine": 41.9028,
     "longitudine": 12.4964
   },
