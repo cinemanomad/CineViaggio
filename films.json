@@ -73,7 +73,7 @@
     "regione": "Lombardia",
     "descrizione": "Call Me by Your Name (2017), diretto da Luca Guadagnino, è ambientato nell’estate del 1983 nel nord Italia. Racconta la delicata storia d’amore tra Elio, un diciassettenne sensibile e colto, e Oliver, un affascinante studente americano ospite della sua famiglia. Tra paesaggi suggestivi, arte e musica, i due vivono un’intensa relazione che segnerà per sempre le loro vite. Il film parla di desiderio, scoperta e malinconia, con uno stile poetico e intimo.",
     "descrizione_location": "Le riprese si sono svolte nella campagna cremasca, con paesaggi incantevoli.",
-    "immagine": "img/call me by your name/locandina.jpg",
+    "immagine": "img/call me by your name/locandina.jpg .jpg",
     "hero_image": "img/call me by your name/hero.jpg",
     "galleria": ["img/call me by your name/location1.jpg", "img/call me by your name/location.jpg.webp"],
     "latitudine": 45.3646,
