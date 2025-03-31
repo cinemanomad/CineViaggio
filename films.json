@@ -185,9 +185,9 @@
     "regione": "Toscana",
     "descrizione": "Il Sorpasso (1962), diretto da Dino Risi, è una commedia amara considerata uno dei capolavori della commedia all’italiana. Racconta l’incontro tra Bruno, un quarantenne spavaldo e impulsivo, e Roberto, un giovane timido e studioso. I due intraprendono un viaggio on the road lungo la costa tirrenica durante il Ferragosto romano, tra risate, riflessioni e contrasti generazionali. Dietro l’apparente leggerezza, il film nasconde una profonda critica sociale all’Italia del boom economico.",
     "descrizione_location": "Le scene del film si svolgono lungo la Via Aurelia, tra il Lazio e la Toscana.",
-    "immagine": "img/il_sorpasso.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/via_aurelia1.jpg", "img/via_aurelia2.jpg"],
+    "immagine": "img/il sorpasso/locandina.jpg",
+    "hero_image": "img/il sorpasso/hero.jpg",
+    "galleria": ["img/il sorpasso/location.jpg", "img/via_aurelia2.jpg"],
     "latitudine": 42.1653,
     "longitudine": 11.9731
   },
