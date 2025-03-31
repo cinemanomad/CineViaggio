@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html lang="it">
 <head>
@@ -8,8 +8,8 @@
 <meta content="Ayca Kaya" name="DC.Creator"/>
 <meta content="Location cinematografiche in Italia" name="DC.Subject"/>
 <meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description"/>
-<meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher">
-<meta content="2025-03-31" name="DC.Date"/>
+<meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher"/>
+<meta content="2025-03-31" name="DC.Date">
 <meta content="Website" name="DC.Type"/>
 <meta content="text/html" name="DC.Format"/>
 <meta content="it" name="DC.Language"/>
@@ -20,7 +20,16 @@
 <link href="css/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&amp;display=swap" rel="stylesheet"/>
-</meta></head>
+</meta><style>
+#map {
+  height: 500px !important;
+  z-index: 10 !important;
+  position: relative;
+}
+.leaflet-container {
+  z-index: 10 !important;
+}
+</style></head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 <a class="navbar-brand" href="index.html">🎬 CineViaggio</a>
