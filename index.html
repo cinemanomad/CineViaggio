@@ -4,10 +4,10 @@
 <head>
 <meta charset="utf-8"/>
 <!-- Metadati Dublin Core -->
-<meta content="CineViaggio" name="DC.Title">
+<meta content="CineViaggio" name="DC.Title"/>
 <meta content="Ayca Kaya" name="DC.Creator"/>
 <meta content="Location cinematografiche in Italia" name="DC.Subject"/>
-<meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description"/>
+<meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description">
 <meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher"/>
 <meta content="2025-03-31" name="DC.Date"/>
 <meta content="Website" name="DC.Type"/>
@@ -70,7 +70,74 @@
 <input class="form-control" id="search-bar" placeholder="🔍 Cerca un film..." type="text"/>
 </div>
 </div>
+<div class="container mt-4">
+<h4 class="text-center">🔠 Navigazione Alfabetica</h4>
+<div class="d-flex flex-wrap justify-content-center mb-3" id="alphabet-filter">
+<button class="btn btn-outline-secondary m-1" data-letter="ALL">Tutti</button>
+<button class="btn btn-outline-secondary m-1" data-letter="A">A</button><button class="btn btn-outline-secondary m-1" data-letter="B">B</button><button class="btn btn-outline-secondary m-1" data-letter="C">C</button><button class="btn btn-outline-secondary m-1" data-letter="D">D</button><button class="btn btn-outline-secondary m-1" data-letter="E">E</button><button class="btn btn-outline-secondary m-1" data-letter="F">F</button><button class="btn btn-outline-secondary m-1" data-letter="G">G</button><button class="btn btn-outline-secondary m-1" data-letter="H">H</button><button class="btn btn-outline-secondary m-1" data-letter="I">I</button><button class="btn btn-outline-secondary m-1" data-letter="J">J</button><button class="btn btn-outline-secondary m-1" data-letter="K">K</button><button class="btn btn-outline-secondary m-1" data-letter="L">L</button><button class="btn btn-outline-secondary m-1" data-letter="M">M</button><button class="btn btn-outline-secondary m-1" data-letter="N">N</button><button class="btn btn-outline-secondary m-1" data-letter="O">O</button><button class="btn btn-outline-secondary m-1" data-letter="P">P</button><button class="btn btn-outline-secondary m-1" data-letter="Q">Q</button><button class="btn btn-outline-secondary m-1" data-letter="R">R</button><button class="btn btn-outline-secondary m-1" data-letter="S">S</button><button class="btn btn-outline-secondary m-1" data-letter="T">T</button><button class="btn btn-outline-secondary m-1" data-letter="U">U</button><button class="btn btn-outline-secondary m-1" data-letter="V">V</button><button class="btn btn-outline-secondary m-1" data-letter="W">W</button><button class="btn btn-outline-secondary m-1" data-letter="X">X</button><button class="btn btn-outline-secondary m-1" data-letter="Y">Y</button><button class="btn btn-outline-secondary m-1" data-letter="Z">Z</button>
+</div>
+</div>
 <div class="row" id="film-container"></div>
+<div class="container mt-5">
+<h2 class="text-center mb-4">🗺️ Esplora i Film sulla Mappa</h2>
+<div class="shadow rounded" id="map" style="height: 500px; width: 100%;"></div>
+</div>
+
+</div>
+<div class="container mt-5">
+<h2 class="text-center mb-4">❓ Domande Frequenti</h2>
+<div class="accordion" id="faqAccordion">
+<div class="card">
+<div class="card-header" id="headingOne">
+<h2 class="mb-0">
+<button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link btn-block text-left" data-target="#collapseOne" data-toggle="collapse" type="button">
+            🎬 Cos'è CineViaggio?
+          </button>
+</h2>
+</div>
+<div aria-labelledby="headingOne" class="collapse show" data-parent="#faqAccordion" id="collapseOne">
+<div class="card-body">
+          CineViaggio è una piattaforma per scoprire location cinematografiche iconiche in Italia e nel mondo,
+          attraverso mappe, filtri e schede dettagliate.
+        </div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingTwo">
+<h2 class="mb-0">
+<button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapseTwo" data-toggle="collapse" type="button">
+            📍 Come posso cercare un film per location?
+          </button>
+</h2>
+</div>
+<div aria-labelledby="headingTwo" class="collapse" data-parent="#faqAccordion" id="collapseTwo">
+<div class="card-body">
+          Puoi usare la barra di ricerca o i filtri per genere, città e regione per trovare un film e la sua location.
+        </div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h2 class="mb-0">
+<button aria-controls="collapseThree" aria-expanded="false" class="btn btn-link btn-block text-left collapsed" data-target="#collapseThree" data-toggle="collapse" type="button">
+            🔍 Come posso cercare i film nel sito?
+          </button>
+</h2>
+</div>
+<div aria-labelledby="headingThree" class="collapse" data-parent="#faqAccordion" id="collapseThree">
+<div class="card-body">
+          Puoi cercare i film in diversi modi:
+          <ul>
+<li>📃 Inserendo il titolo nella barra di ricerca</li>
+<li>🎭 Usando i <strong>filtri</strong> per genere, città o regione</li>
+<li>🔠 Cliccando sulla <strong>navigazione alfabetica</strong> A–Z</li>
+<li>🧭 Esplorando la <a href="mappa.html">mappa interattiva</a></li>
+<li>🧩 Navigando nella <a href="collezione.html">collezione</a> o tra le schede dei film</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 <footer class="bg-dark text-white text-center py-3 mt-5">
 <p>🎬 Progetto Universitario - CineViaggio</p>
@@ -157,6 +224,53 @@
         document.querySelectorAll('select, input').forEach(el => el.value = "");
         filterFilms();
     });
-  </script>
+  
+
+    document.querySelectorAll('#alphabet-filter button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const letter = btn.getAttribute('data-letter');
+        document.getElementById('search-bar').value = '';
+        if (letter === 'ALL') {
+          displayFilms(filmsData);
+        } else {
+          const filtered = filmsData.filter(film =>
+            film.titolo && film.titolo.toUpperCase().startsWith(letter)
+          );
+          displayFilms(filtered);
+        }
+      });
+    });
+    
+</script>
+
+<!-- Leaflet JS -->
+<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([41.8719, 12.5674], 6);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  fetch('films.json')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(film => {
+        if (film.latitudine && film.longitudine) {
+          const popupHTML = `
+            <div style="text-align:center;">
+              <img src="${film.immagine}" alt="Locandina" style="width:100%;max-height:120px;object-fit:cover;border-radius:5px;">
+              <h6 style="margin-top:5px;">${film.titolo}</h6>
+              <a href="dettaglio-location.html?film=${encodeURIComponent(film.titolo)}" class="btn btn-sm btn-danger mt-2">Scheda Film</a>
+            </div>
+          `;
+          L.marker([film.latitudine, film.longitudine])
+            .addTo(map)
+            .bindPopup(popupHTML);
+        }
+      });
+    });
+</script>
 </body>
 </html>
