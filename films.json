@@ -153,9 +153,9 @@
     "regione": "Lazio",
     "descrizione": "Ladri di Biciclette (1948), diretto da Vittorio De Sica, è un capolavoro del neorealismo italiano. Racconta la storia di Antonio Ricci, un disoccupato che trova finalmente lavoro attaccando manifesti, ma ha bisogno della bicicletta per lavorare. Quando la bici gli viene rubata, Antonio e il suo piccolo figlio Bruno iniziano una disperata ricerca per le strade di Roma. Il film è un racconto toccante sulla dignità, la povertà e il rapporto padre-figlio.",
     "descrizione_location": "Le strade di Roma sono il teatro di questa intensa storia di povertà e disperazione.",
-    "immagine": "img/ladri_di_biciclette.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/ladri1.jpg", "img/ladri2.jpg"],
+    "immagine": "img/ladri di bicicletta/locandina.jpg",
+    "hero_image": "img/ladri di bicicletta/hero.jpg",
+    "galleria": ["img/ladri di bicicletta/location.jpg", "img/ladri2.jpg"],
     "latitudine": 41.8955,
     "longitudine": 12.4823
   },
