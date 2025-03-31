@@ -201,9 +201,9 @@
     "regione": "Campania",
     "descrizione": "Le Mépris (Il disprezzo) è un film del 1963 diretto da Jean-Luc Godard, con Brigitte Bardot, Michel Piccoli e Jack Palance.La storia segue Paul, uno sceneggiatore francese che viene assunto per riscrivere un adattamento dell’Odissea, diretto da Fritz Lang. Durante la produzione in Italia, il suo matrimonio con la moglie Camille si deteriora rapidamente. La donna inizia a disprezzarlo, sentendosi trascurata e venduta al produttore americano.Il film esplora il conflitto tra arte e commercio, il ruolo della donna nelle relazioni e l’alienazione esistenziale. La fotografia di Raoul Coutard e le riprese nella suggestiva Villa Malaparte a Capri rendono il film visivamente affascinante.",
     "descrizione_location": "Villa Malaparte (Capri, Italia).Le scene più iconiche del film sono state girate qui. Jean-Luc Godard ha reso questa villa modernista il centro visivo della pellicola.",
-    "immagine": "img/il_sorpasso.jpg",
-    "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/via_aurelia1.jpg", "img/via_aurelia2.jpg"],
+    "immagine": "img/mempris/locandina.jpg",
+    "hero_image": "img/mempris/hero.jpg",
+    "galleria": ["img/mempris/location.jpg", "img/via_aurelia2.jpg"],
     "latitudine": 40.5441,
     "longitudine": 14.2561
   }
