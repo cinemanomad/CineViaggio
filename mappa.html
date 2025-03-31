@@ -1,11 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineViaggio - Mappa Location</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-  <style>
+<meta charset="utf-8"/>
+<!-- Metadati Dublin Core -->
+<meta content="CineViaggio" name="DC.Title">
+<meta content="Ayca Kaya" name="DC.Creator"/>
+<meta content="Location cinematografiche in Italia" name="DC.Subject"/>
+<meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description"/>
+<meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher"/>
+<meta content="2025-03-31" name="DC.Date"/>
+<meta content="Website" name="DC.Type"/>
+<meta content="text/html" name="DC.Format"/>
+<meta content="it" name="DC.Language"/>
+<meta content="https://tuosito.github.io" name="DC.Identifier"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CineViaggio - Mappa Location</title>
+<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
+<style>
     body { margin: 0; font-family: 'Raleway', sans-serif; }
     #map { height: 100vh; width: 100vw; }
     .popup-content img {
@@ -28,11 +40,9 @@
       text-decoration: underline;
     }
   </style>
-</head>
+</meta></head>
 <body>
-
 <div id="map"></div>
-
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
   const map = L.map('map').setView([41.8719, 12.5674], 6);
@@ -65,6 +75,5 @@
       alert("Errore nel caricamento del file films.json. Verifica che il file sia presente e corretto.");
     });
 </script>
-
 </body>
 </html>
