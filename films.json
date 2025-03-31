@@ -298,21 +298,21 @@
 },
   {
   "titolo": "The Italian Job",
-  "regista": "F. Gary Gray",
-  "anno": 2003,
-  "genere": "Azione, Crimine",
-  "location": "Venezia",
-  "citta": "Venezia",
-  "regione": "Veneto",
-  "descrizione": "The Italian Job (2003), remake dell’omonimo film del 1969, è un adrenalinico heist movie diretto da F. Gary Gray. La trama ruota attorno a una rapina spettacolare e a un piano di vendetta orchestrato da un gruppo di ladri professionisti. La sequenza d’apertura è ambientata tra i canali e i ponti di Venezia, dove si svolge un colpo mozzafiato che dà inizio all’azione frenetica del film.",
-  "descrizione_location": "Venezia è protagonista dell’intera sequenza iniziale: le riprese sono state effettuate tra il Canal Grande, Piazza San Marco e vari ponti e vicoli iconici della città. L’uso delle Mini Cooper e degli inseguimenti tra le calli e i canali offre una visione dinamica e insolita della città lagunare.",
+  "regista": "Peter Collinson",
+  "anno": 1969,
+  "genere": "Azione, Commedia, Crimine",
+  "location": "Torino",
+  "citta": "Torino",
+  "regione": "Piemonte",
+  "descrizione": "The Italian Job (1969), diretto da Peter Collinson, è un cult del cinema britannico e una delle heist comedy più iconiche di sempre. Il protagonista Charlie Croker, interpretato da Michael Caine, organizza una spettacolare rapina all’oro a Torino, sfruttando un ingegnoso piano che coinvolge inseguimenti con Mini Cooper tra le strade, i tunnel e persino le scale della città. Il film è famoso per l'umorismo britannico, la colonna sonora di Quincy Jones e il suo finale aperto.",
+  "descrizione_location": "Torino è la grande protagonista del film, con scene girate in luoghi simbolo come la Mole Antonelliana, il Palavela, la Galleria Subalpina e le Rampe di Lingotto. Il film ha contribuito a rendere iconica l’immagine della città industriale italiana.",
   "immagine": "img/the italian job/locandina.jpg",
   "hero_image": "img/the italian job/hero.jpg.webp",
   "galleria": [
     "img/the italian job/location.jpg",
-    "img/the_italian_job/canalgrande.jpg"
+    "img/the_italian_job_1969/mini_cooper.jpg"
   ],
-  "latitudine": 45.4408,
-  "longitudine": 12.3155
+  "latitudine": 45.0703,
+  "longitudine": 7.6869
 }
 ]
