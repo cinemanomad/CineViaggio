@@ -206,7 +206,7 @@
     "galleria": ["img/mempris/location.jpg", "img/via_aurelia2.jpg"],
     "latitudine": 40.5441,
     "longitudine": 14.2561
-  }
+  },
   {
     "titolo": "The Talented Mr. Ripley",
     "regista": "Anthony Minghella",
@@ -225,5 +225,5 @@
     ],
     "latitudine": 40.7592,
     "longitudine": 14.0321
-  },
+  }
 ]
