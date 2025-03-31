@@ -89,9 +89,9 @@
     "regione": "Campania",
     "descrizione": "Il Postino (1994), diretto da Michael Radford, racconta l’amicizia tra Mario Ruoppolo, un timido postino di un’isola italiana, e il celebre poeta cileno Pablo Neruda, esiliato lì per motivi politici. Mario, incaricato di consegnargli la posta, rimane affascinato dalla poesia e chiede a Neruda di aiutarlo a conquistare la bella Beatrice. Il film è una toccante storia di crescita, poesia e amore, sullo sfondo di un paesaggio incantevole e di una profonda umanità.",
     "descrizione_location": "Procida, con i suoi colori pastello e il mare cristallino, è il perfetto sfondo per questa toccante storia di amicizia e poesia.",
-    "immagine": "img/il_postino/locandina.jpg",
+    "immagine": "img/il postino/locandina.jpg",
     "hero_image": "img/il postino/hero.jpg",
-    "galleria": ["img/il postino/location.jpg", "img/il postino/location1.jpg"],
+    "galleria": ["img/il postino/location.jpg", "location1.jpg.webp"],
     "latitudine": 40.7649,
     "longitudine": 14.0311
   },
