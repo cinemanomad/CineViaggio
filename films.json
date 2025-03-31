@@ -123,7 +123,7 @@
     "descrizione_location": "Palazzo Gangi, celebre per il suo magnifico Salone degli Specchi, è stato la location della famosa scena del ballo.",
     "immagine": "img/il gattopardo/locandina.jpg",
     "hero_image": "img/hero_la_grande_bellezza.jpg",
-    "galleria": ["img/palermo1.jpg", "img/palermo2.jpg"],
+    "galleria": ["img/il gattopardo/location.jpg", "img/il gattopardo/location1.jpg"],
     "latitudine": 38.1157,
     "longitudine": 13.3615
   },
