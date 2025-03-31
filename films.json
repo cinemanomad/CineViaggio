@@ -238,5 +238,24 @@
   "galleria": ["img/the english patient/location.jpg.webp","img/the_english_patient/monteriggioni.jpg"],
   "latitudine": 43.0786,
   "longitudine": 11.6782
+},
+  {
+  "titolo": "Under the Tuscan Sun",
+  "regista": "Audrey Wells",
+  "anno": 2003,
+  "genere": "Commedia Romantica",
+  "location": "Cortona, Positano",
+  "citta": "Cortona",
+  "regione": "Toscana",
+  "descrizione": "Under the Tuscan Sun (2003), diretto da Audrey Wells, racconta la rinascita di Frances, una scrittrice americana che, dopo un divorzio doloroso, compra una vecchia villa in Toscana nella speranza di ricostruire la propria vita. Tra incontri inaspettati, lavori di ristrutturazione e nuove amicizie, il film è una celebrazione della seconda possibilità e della bellezza dei piccoli momenti.",
+  "descrizione_location": "Gran parte del film è stato girato a Cortona, in Toscana, tra le colline, i vicoli in pietra e le piazze del borgo. Alcune scene sono ambientate anche a Positano, sulla Costiera Amalfitana, rendendo il film un omaggio visivo all’Italia.",
+  "immagine": "img/under the tuscan sun/locandina.jpg",
+  "hero_image": "img/under the tuscan sun/hero.jpg",
+  "galleria": [
+    "img/under the tuscan sun/location.jpg",
+    "img/under_the_tuscan_sun/positano1.jpg"
+  ],
+  "latitudine": 43.2752,
+  "longitudine": 11.9834
 }
 ]
