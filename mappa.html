@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <!-- Metadati Dublin Core -->
-<meta content="CineViaggio" name="DC.Title">
-<meta content="Ayca Kaya" name="DC.Creator"/>
+<meta content="CineViaggio" name="DC.Title"/>
+<meta content="Ayca Kaya" name="DC.Creator">
 <meta content="Location cinematografiche in Italia" name="DC.Subject"/>
 <meta content="Esplorazione delle location dei film italiani tramite mappa, filtri e schede." name="DC.Description"/>
 <meta content="Università di Bologna - Progetto DAMS" name="DC.Publisher"/>
@@ -39,7 +39,19 @@
       text-decoration: underline;
     }
   </style>
-</meta></head>
+</meta><style>
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  z-index: 1000;
+}
+#map {
+  height: 100vh !important;
+  width: 100%;
+  margin-top: 56px; /* spazio per la navbar */
+  z-index: 1;
+  position: relative;
+}
+</style></head>
 <body>
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
