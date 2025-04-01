@@ -169,9 +169,9 @@
     "regione": "Toscana",
     "descrizione": "La Vita è Bella (1997), diretto e interpretato da Roberto Benigni, è una commovente storia che unisce umorismo e tragedia. Ambientato prima e durante la Seconda Guerra Mondiale, racconta la vicenda di Guido, un uomo ironico e sognatore, che si innamora di Dora e costruisce con lei una famiglia. Quando vengono deportati in un campo di concentramento insieme al figlio Giosuè, Guido usa la sua fantasia per proteggere il bambino dagli orrori della guerra, facendogli credere che tutto sia parte di un gioco. Un film struggente sulla forza dell’amore e dell'immaginazione.",
     "descrizione_location": "Il centro storico di Arezzo è stato scelto per le sue strade pittoresche e il fascino rinascimentale.",
-    "immagine": "img/la vita è bella/locandina.jpg",
+    "immagine": "img/lavita/locandina.jpg",
     "hero_image": "img/lavita/hero.jpg",
-    "galleria": ["img/lavita/location.jpg", ""],
+    "galleria": ["img/lavita/location.jpg", "img/lavita/location.jpg"],
     "latitudine": 43.4633,
     "longitudine": 11.8793
   },
