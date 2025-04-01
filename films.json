@@ -278,25 +278,6 @@
   "longitudine": 12.4964
 },
   {
-  "titolo": "Malèna",
-  "regista": "Giuseppe Tornatore",
-  "anno": 2000,
-  "genere": "Drammatico, Sentimentale",
-  "location": "Siracusa",
-  "citta": "Siracusa",
-  "regione": "Sicilia",
-  "descrizione": "Malèna (2000), diretto da Giuseppe Tornatore, racconta la storia della giovane e affascinante Malèna, vista attraverso gli occhi di Renato, un ragazzo che attraversa l'adolescenza durante la Seconda Guerra Mondiale in una cittadina siciliana. Tra desiderio, gelosia e maldicenze, il film esplora la solitudine, la bellezza femminile e la crudeltà del pregiudizio sociale, con un'intensa interpretazione di Monica Bellucci.",
-  "descrizione_location": "Le riprese si sono svolte principalmente a Siracusa, in Sicilia. Il centro storico, l’isola di Ortigia e il lungomare diventano lo scenario suggestivo di una storia di formazione e malinconia, immersa nella luce del Mediterraneo e nella memoria del passato.",
-  "immagine": "img/malèna/locandina-5.jpg",
-  "hero_image": "img/malèna/locandinapg2.jpg",
-  "galleria": [
-    "img/malèna/location.jpg",
-    "img/malena/siracusa1.jpg"
-  ],
-  "latitudine": 37.0755,
-  "longitudine": 15.2866
-},
-  {
   "titolo": "The Italian Job",
   "regista": "Peter Collinson",
   "anno": 1969,
@@ -385,5 +366,38 @@
   "galleria": ["img/english_patient/monastero1.jpg", "img/english_patient/pienza.jpg"],
   "latitudine": 43.0701,
   "longitudine": 11.6685
-}
+},
+  {
+  "titolo": "The Talented Mr. Ripley",
+  "regista": "Anthony Minghella",
+  "anno": 1999,
+  "genere": "Thriller Psicologico",
+  "location": "Procida, Venezia, Roma",
+  "citta": "Procida",
+  "regione": "Campania",
+  "descrizione": "Il giovane Tom Ripley viene incaricato di riportare a casa il ricco e sfuggente Dickie Greenleaf. Presto, l’invidia e l’ambizione prenderanno il sopravvento, trasformando la missione in un gioco pericoloso. Un thriller elegante tra costumi anni '50 e paesaggi italiani mozzafiato.",
+  "descrizione_location": "Le riprese si sono svolte a Procida (che nel film diventa Mongibello), Venezia, Roma, Ischia. Le ambientazioni autentiche contribuiscono alla raffinatezza e tensione visiva del film.",
+  "immagine": "img/the_talented_mr_ripley/locandina.jpg",
+  "hero_image": "img/the_talented_mr_ripley/hero.jpg",
+  "galleria": ["img/the_talented_mr_ripley/procida.jpg", "img/the_talented_mr_ripley/venezia.jpg"],
+  "latitudine": 40.7592,
+  "longitudine": 14.0321
+},
+  {
+  "titolo": "Malèna",
+  "regista": "Giuseppe Tornatore",
+  "anno": 2000,
+  "genere": "Drammatico, Sentimentale",
+  "location": "Ortigia",
+  "citta": "Siracusa",
+  "regione": "Sicilia",
+  "descrizione": "Nel pieno della Seconda Guerra Mondiale, il giovane Renato osserva incantato la bellissima Malèna, oggetto di desiderio e pettegolezzo. Un film poetico e malinconico che racconta la crescita, il desiderio e la crudeltà sociale.",
+  "descrizione_location": "Girato interamente nell’isola di Ortigia, cuore storico di Siracusa, con le sue stradine barocche e piazze assolate, perfetta cornice per il contrasto tra bellezza e pregiudizio.",
+  "immagine": "img/malena/locandina.jpg",
+  "hero_image": "img/malena/hero.jpg",
+  "galleria": ["img/malena/ortigia1.jpg", "img/malena/ortigia2.jpg"],
+  "latitudine": 37.0606,
+  "longitudine": 15.2931
+},
+  
 ]
