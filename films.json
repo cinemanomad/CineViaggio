@@ -325,11 +325,9 @@
   "regione": "Abruzzo",
   "descrizione": "Lo chiamavano Trinità... (1970), diretto da E. B. Clucher e interpretato da Terence Hill e Bud Spencer, è un classico della commedia western all’italiana. Il film racconta la storia di Trinità, un pistolero pigro ma velocissimo, che insieme al fratello Bambino si trova coinvolto in una serie di avventure per aiutare una comunità di mormoni oppressa da un prepotente latifondista. Il film unisce umorismo, scazzottate epiche e paesaggi mozzafiato.",
   "descrizione_location": "Le scene più iconiche del film sono state girate sull'altopiano di Campo Imperatore, nel Parco Nazionale del Gran Sasso, in Abruzzo. L’ambientazione naturale, che ricorda il Far West americano, è diventata un punto di riferimento per gli amanti del genere spaghetti western.",
-  "immagine": "img/Lo chiamavano Trinità/locandinapg1.jpg",
+  "immagine": "img/LochiamavanoTrinità/locandinapg1.jpg",
   "hero_image": "img/trinita/hero.jpg",
-  "galleria": [
-    "img/Lo chiamavano Trinità/CampoImperatore1540x866.jpg",
-    "img/trinita/gran_sasso.jpg"
+  "galleria": ["img/Lo chiamavano Trinità/CampoImperatore1540x866.jpg", "img/trinita/gran_sasso.jpg"
   ],
   "latitudine": 42.4431,
   "longitudine": 13.5619
