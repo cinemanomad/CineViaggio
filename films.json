@@ -171,7 +171,7 @@
     "descrizione_location": "Il centro storico di Arezzo è stato scelto per le sue strade pittoresche e il fascino rinascimentale.",
     "immagine": "img/lavita/locandina.jpg",
     "hero_image": "img/lavita/hero.jpg",
-    "galleria": ["img/lavita/location.jpg", "img/lavita/location.jpg"],
+    "galleria": ["img/lavita/poppi.jpg", "img/lavita/location.jpg"],
     "latitudine": 43.4633,
     "longitudine": 11.8793
   },
