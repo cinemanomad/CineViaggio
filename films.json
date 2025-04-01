@@ -191,7 +191,7 @@
     "latitudine": 42.1653,
     "longitudine": 11.9731
   },
-    {
+  {
     "titolo": "Le Mempris",
     "regista": "Jean-Luc Godard",
     "anno": 1963,
@@ -398,6 +398,5 @@
   "galleria": ["img/malena/ortigia1.jpg", "img/malena/ortigia2.jpg"],
   "latitudine": 37.0606,
   "longitudine": 15.2931
-},
-  
+}
 ]
