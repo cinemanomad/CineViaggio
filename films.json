@@ -352,22 +352,6 @@
   "longitudine": 7.6632
 },
   {
-  "titolo": "The English Patient",
-  "regista": "Anthony Minghella",
-  "anno": 1996,
-  "genere": "Drammatico, Guerra, Romantico",
-  "location": "Monastero di Sant'Anna in Camprena",
-  "citta": "Pienza",
-  "regione": "Toscana",
-  "descrizione": "Vincitore di 9 premi Oscar, Il Paziente Inglese racconta la storia di un amore tormentato e segreti svelati nel corso della Seconda Guerra Mondiale. Con paesaggi mozzafiato e un tono malinconico, è considerato uno dei film più intensi degli anni '90.",
-  "descrizione_location": "Il monastero toscano di Sant'Anna in Camprena, vicino a Pienza, ospita le scene ambientate nell’ospedale dove vive il protagonista morente. La location è immersa nel paesaggio toscano più autentico.",
-  "immagine": "img/english_patient/locandina.jpg",
-  "hero_image": "img/english_patient/hero.jpg",
-  "galleria": ["img/english_patient/monastero1.jpg", "img/english_patient/pienza.jpg"],
-  "latitudine": 43.0701,
-  "longitudine": 11.6685
-},
-  {
   "titolo": "The Talented Mr. Ripley",
   "regista": "Anthony Minghella",
   "anno": 1999,
