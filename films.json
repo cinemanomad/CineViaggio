@@ -10,7 +10,7 @@
     "descrizione": "La Dolce Vita è un film del 1960 diretto da Federico Fellini, considerato uno dei capolavori del cinema italiano. Ambientato nella Roma degli anni '60, racconta la vita di Marcello Rubini, un giornalista mondano che si muove tra feste, nobili decaduti, star del cinema e intellettuali, alla ricerca di un senso più profondo della vita. Il film esplora temi come il vuoto esistenziale, la decadenza morale e la crisi d’identità, attraverso una serie di episodi che mostrano la bellezza e l’ambiguità della dolce vita romana. Iconica la scena della fontana di Trevi con Anita Ekberg.",
     "descrizione_location": "La Fontana di Trevi è uno dei luoghi più iconici di Roma, resa immortale dalla scena con Anita Ekberg.",
     "immagine": "img/la dolce vita/locandina.jpg",
-    "hero_image": "img/la dolce vita/hero.jpg.avif",
+    "hero_image": "img/la dolce vita/hero.jpg",
     "galleria": ["img/la dolce vita/location.jpg", "img/trevi2.jpg", "img/trevi3.jpg"],
     "latitudine": 41.9009,
     "longitudine": 12.4833
