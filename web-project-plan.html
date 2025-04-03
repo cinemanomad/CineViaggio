@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Project Plan – CineViaggio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Web Project Plan – CineViaggio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
     body {
       padding-top: 80px;
       padding-bottom: 40px;
@@ -16,114 +16,125 @@
   </style>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">🎬 CineViaggio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="catalogo.html">Collezione</a></li>
-        <li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Web Project Plan</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-  <h1>Web Project Plan – CineViaggio</h1>
-
-  <h3>🌐 Abstract</h3>
-  <p><strong>CineViaggio</strong> è un sito web che raccoglie e presenta film girati in Italia, valorizzando il legame tra cinema e territorio. L'obiettivo è promuovere il patrimonio cinematografico e culturale attraverso un'esperienza interattiva e visivamente coinvolgente.</p>
-
-  <h3>📅 Brief</h3>
-  <p>Il sito permette la scoperta e la consultazione di una collezione di film girati in Italia. L'utente può cercare un film per titolo, genere, città o regione, esplorare la mappa interattiva, navigare attraverso lettere dell'alfabeto e accedere a una scheda dettagliata per ogni location.</p>
-
-  <h3>📖 Benchmark</h3>
-  <ul>
-    <li><strong>IMDb Locations</strong> – utile per struttura dati</li>
-    <li><strong>MovieMaps</strong> – sito sulle location</li>
-    <li><strong>My Movies</strong> – database e descrizione  di film</li>
-  </ul>
-
-  <h3>📊 Architettura dell'informazione</h3>
-  <ul>
-    <li>Homepage</li>
-    <li>Collezione</li>
-    <li>Scheda film (dettaglio-location.html)</li>
-    <li>Mappa</li>
-    <li>Web Project Plan</li>
-  </ul>
-
-  <h3>🗂 Wireframe</h3>
-  <p>Sono stati realizzati tre wireframe PDF:<br>
-    <a href="img/home.pdf">Wireframe Homepage</a><br>
-    <a href="img/DETTAGLIO LOGATION.pdf">Wireframe Collezione</a><br>
-    <a href="img/DETTAGLIO LOGATION.pdf">Wireframe Scheda Film</a></p>
-    <a href="img/CINEVIAGGIO 3.pdf">Wireframe Mappa</a></p>
-
- 
-
-  <h3>🎨 Grafica e UX</h3>
-  <ul>
-    <li>Colori caldi</li>
-    <li>Font leggibili</li>
-    <li>Layout responsive</li>
-    <li>Mappa con Leaflet</li>
-    <li>Immagini "hero" per ogni film</li>
-    <li>Hover effect sulle card</li>
-    <li>Header con immagini full-screen e overlay</li>
-    <li>Uso di emoji per migliorare la leggibilità</li>
-  </ul>
-
-  <h3>🔎 Servizi di browsing</h3>
-  <ul>
-    <li>Ricerca testuale</li>
-    <li>Filtri (genere, città, regione)</li>
-    <li>Navigazione alfabetica (A–Z)</li>
-    <li>Breadcrumb e struttura intuitiva</li>
-    <li>Mappa interattiva con marker cliccabili</li>
-    <li>URL dinamici per schede dettagliate</li>
-    <li>FAQ con sistema ad accordion</li>
-  </ul>
-
-  <h3>🛠️ Tecnologie e strumenti</h3>
-  <p>HTML5, CSS3, JavaScript, Bootstrap 4.5.2, Leaflet.js, JSON, Fetch API, Carousel di Bootstrap, GitHub Pages</p>
-
-  <h3>📂 Metadati e Dublin Core</h3>
-  <p>Nei file HTML sono inclusi i seguenti metadati:<br>
-    DC.Title, DC.Creator, DC.Subject, DC.Description, DC.Publisher, DC.Date, DC.Type, DC.Format, DC.Language, DC.Identifier</p>
-
-  <h3>♿ Accessibilità</h3>
-  <ul>
-    <li>Testo leggibile e contrastato</li>
-    <li>Immagini con attributi alt</li>
-    <li>Layout responsive</li>
-    <li>Navigazione da tastiera e interazione semplificata</li>
-  </ul>
-
-  <h3>📚 Bibliografia / Sitografia</h3>
-  <ul>
-    <li>Slides Prof.ssa Tomasi</li>
-    <li><a href=" https://www.w3schools.com">w3schools.com</a></li>
-    <li><a href="https://leafletjs.com/">leafletjs.com</a></li>
-    <li><a href="https://www.html.it/">html.it</a></li>
-    <li><a href="https://getbootstrap.com/">getbootstrap.com</a></li>
-    <li><a href="https://developer.mozilla.org/">developer.mozilla.org</a></li>
-    <li><a href="https://pixabay.com/it">pixabay.com/it</a></li>
-  </ul>
-
-  <h3>🏠 Pubblicazione</h3>
-  <p>Il sito è pubblicato tramite GitHub Pages all'indirizzo: <code>https://cinemanomad.github.io/CineViaggio/</code></p>
-
-  <h3>✅ Conclusione</h3>
-  <p>CineViaggio è un progetto culturale e visivo che unisce il cinema al territorio. Dimostra come le tecnologie web possano essere impiegate per valorizzare luoghi reali attraverso narrazioni cinematografiche, con un'interfaccia intuitiva e coinvolgente.</p>
+<div class="container-fluid">
+<a class="navbar-brand" href="index.html">🎬 CineViaggio</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="catalogo.html">Collezione</a></li>
+<li class="nav-item"><a class="nav-link" href="mappa.html">Mappa</a></li>
+<li class="nav-item"><a class="nav-link active" href="#">Web Project Plan</a></li>
+</ul>
 </div>
+</div>
+</nav>
+<div class="container">
+<h1>Web Project Plan – CineViaggio</h1>
+<h3>🌐 Abstract</h3>
+<p><strong>CineViaggio</strong> è un sito web che raccoglie e presenta film girati in Italia, valorizzando il legame tra cinema e territorio. L'obiettivo è promuovere il patrimonio cinematografico e culturale attraverso un'esperienza interattiva e visivamente coinvolgente.</p>
+<h3>📅 Brief</h3>
+<p>Il sito permette la scoperta e la consultazione di una collezione di film girati in Italia. L'utente può cercare un film per titolo, genere, città o regione, esplorare la mappa interattiva, navigare attraverso lettere dell'alfabeto e accedere a una scheda dettagliata per ogni location.</p>
+<h3>📖 Benchmark</h3>
+<ul>
+<li><strong>IMDb Locations</strong> – utile per struttura dati</li>
+<li><strong>MovieMaps</strong> – sito sulle location</li>
+<li><strong>My Movies</strong> – database e descrizione  di film</li>
+</ul>
+<h3>📊 Architettura dell'informazione</h3>
+<ul>
+<li>Homepage</li>
+<li>Collezione</li>
+<li>Scheda film (dettaglio-location.html)</li>
+<li>Mappa</li>
+<li>Web Project Plan</li>
+</ul>
+<h3>🗂 Wireframe</h3>
+<p>Sono stati realizzati tre wireframe PDF:<br/>
+<a href="img/home.pdf">Wireframe Homepage</a><br/>
+<a href="img/DETTAGLIO LOGATION.pdf">Wireframe Collezione</a><br/>
+<a href="img/DETTAGLIO LOGATION.pdf">Wireframe Scheda Film</a></p>
+<a href="img/CINEVIAGGIO 3.pdf">Wireframe Mappa</a>
 
+<h3>🧠 Struttura del sito</h3>
+<pre><code>
+CineViaggio
+│
+├── Home (index.html)
+│   ├── Hero con immagine e titolo
+│   ├── Mappa interattiva con marker
+│   ├── Filtri (genere, città, regione)
+│   ├── Ricerca testuale
+│   ├── Navigazione alfabetica A–Z
+│   ├── Card dei film
+│   └── Domande frequenti (FAQ)
+│
+├── Catalogo (collezione.html)
+│   └── Lista film filtrabile, senza mappa né FAQ
+│
+├── Scheda Film (dettaglio-location.html)
+│   ├── Hero image
+│   ├── Descrizione film
+│   ├── Descrizione location
+│   ├── Galleria immagini
+│   └── Mappa location singola
+│
+├── Mappa (mappa.html)
+│   └── Mappa a schermo intero con marker cliccabili
+│
+└── Web Project Plan (web-project-plan.html)
+    └── Documentazione tecnica e progettuale
+</code></pre>
+<h3>🎨 Grafica e UX</h3>
+<ul>
+<li>Colori caldi</li>
+<li>Font leggibili</li>
+<li>Layout responsive</li>
+<li>Mappa con Leaflet</li>
+<li>Immagini "hero" per ogni film</li>
+<li>Hover effect sulle card</li>
+<li>Header con immagini full-screen e overlay</li>
+<li>Uso di emoji per migliorare la leggibilità</li>
+</ul>
+<h3>🔎 Servizi di browsing</h3>
+<ul>
+<li>Ricerca testuale</li>
+<li>Filtri (genere, città, regione)</li>
+<li>Navigazione alfabetica (A–Z)</li>
+<li>Breadcrumb e struttura intuitiva</li>
+<li>Mappa interattiva con marker cliccabili</li>
+<li>URL dinamici per schede dettagliate</li>
+<li>FAQ con sistema ad accordion</li>
+</ul>
+<h3>🛠️ Tecnologie e strumenti</h3>
+<p>HTML5, CSS3, JavaScript, Bootstrap 4.5.2, Leaflet.js, JSON, Fetch API, Carousel di Bootstrap, GitHub Pages</p>
+<h3>📂 Metadati e Dublin Core</h3>
+<p>Nei file HTML sono inclusi i seguenti metadati:<br/>
+    DC.Title, DC.Creator, DC.Subject, DC.Description, DC.Publisher, DC.Date, DC.Type, DC.Format, DC.Language, DC.Identifier</p>
+<h3>♿ Accessibilità</h3>
+<ul>
+<li>Testo leggibile e contrastato</li>
+<li>Immagini con attributi alt</li>
+<li>Layout responsive</li>
+<li>Navigazione da tastiera e interazione semplificata</li>
+</ul>
+<h3>📚 Bibliografia / Sitografia</h3>
+<ul>
+<li>Slides Prof.ssa Tomasi</li>
+<li><a href=" https://www.w3schools.com">w3schools.com</a></li>
+<li><a href="https://leafletjs.com/">leafletjs.com</a></li>
+<li><a href="https://www.html.it/">html.it</a></li>
+<li><a href="https://getbootstrap.com/">getbootstrap.com</a></li>
+<li><a href="https://developer.mozilla.org/">developer.mozilla.org</a></li>
+<li><a href="https://pixabay.com/it">pixabay.com/it</a></li>
+</ul>
+<h3>🏠 Pubblicazione</h3>
+<p>Il sito è pubblicato tramite GitHub Pages all'indirizzo: <code>https://cinemanomad.github.io/CineViaggio/</code></p>
+<h3>✅ Conclusione</h3>
+<p>CineViaggio è un progetto culturale e visivo che unisce il cinema al territorio. Dimostra come le tecnologie web possano essere impiegate per valorizzare luoghi reali attraverso narrazioni cinematografiche, con un'interfaccia intuitiva e coinvolgente.</p>
+</div>
 </body>
 </html>
